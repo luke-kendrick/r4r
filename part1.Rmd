@@ -1,0 +1,19 @@
+---
+output:
+  revealjs::revealjs_presentation:
+    theme: white
+    transition: slide
+    self_contained: false
+    reveal_plugins: ["menu"]
+    includes:
+      after_body: home.html
+css: custom.css
+---
+
+# Introduction
+
+This is Part 1.
+
+# Next Slide
+
+This is another slide.

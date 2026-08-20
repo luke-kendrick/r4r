@@ -1,0 +1,220 @@
+.reveal .slide-menu-button {
+  top: 15px !important;
+  bottom: auto !important;
+}
+.home-button {
+  position: fixed;
+  top: 18px;
+  right: 24px;
+  z-index: 1000;
+  padding: 7px 14px;
+  background: transparent;
+  color: #18324a !important;
+  border: 1px solid #9aabb8;
+  border-radius: 5px;
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.home-button:hover {
+  background: #18324a;
+  color: white !important;
+  border-color: #18324a;
+}
+/* ================================
+   Clean Modern Reveal.js Theme
+   ================================ */
+
+.reveal {
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  font-size: 32px;
+  color: #243447;
+  background: #f7f9fb;
+}
+
+/* Headings */
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Aptos Display", "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  color: #18324a;
+  text-transform: none;
+  letter-spacing: -0.02em;
+}
+
+.reveal h1 {
+  font-size: 2.2em;
+}
+
+.reveal h2 {
+  font-size: 1.6em;
+}
+
+.reveal h3 {
+  font-size: 1.25em;
+}
+
+/* Body text */
+.reveal p,
+.reveal li {
+  line-height: 1.45;
+}
+
+/* Links */
+.reveal a {
+  color: #2878a8;
+  text-decoration: none;
+}
+
+.reveal a:hover {
+  text-decoration: underline;
+}
+
+/* Lists */
+.reveal ul,
+.reveal ol {
+  margin-top: 0.5em;
+}
+
+.reveal li {
+  margin-bottom: 0.35em;
+}
+
+/* Code */
+.reveal pre {
+  box-shadow: none;
+  border-radius: 6px;
+}
+
+.reveal code {
+  border-radius: 4px;
+}
+
+/* Images */
+.reveal img {
+  border: none;
+  box-shadow: none;
+}
+
+/* Slide number */
+.reveal .slide-number {
+  font-size: 0.6em;
+}
+
+/* ================================
+   Home button
+   ================================ */
+
+.home-button {
+  position: fixed;
+  top: 18px;
+  right: 24px;
+  z-index: 1000;
+  padding: 7px 14px;
+  background: white;
+  color: #18324a !important;
+  border: 1px solid #cbd5df;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none !important;
+}
+
+.home-button:hover {
+  background: #eef3f7;
+}
+
+/* ================================
+   Menu button
+   ================================ */
+
+.reveal .slide-menu-button {
+  top: 15px !important;
+  bottom: auto !important;
+}
+/* =========================================
+   Normal R Markdown pages
+   Match the Reveal.js presentation
+   ========================================= */
+
+body {
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  color: #243447;
+  background: #ffffff;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Main page content */
+.container {
+  max-width: 1100px;
+}
+
+/* Headings */
+body h1,
+body h2,
+body h3,
+body h4 {
+  font-family: "Aptos Display", "Segoe UI", Arial, sans-serif;
+  color: #18324a;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: -0.02em;
+}
+
+body h1 {
+  font-size: 2.3em;
+}
+
+body h2 {
+  font-size: 1.7em;
+  margin-top: 1.5em;
+}
+
+body h3 {
+  font-size: 1.3em;
+}
+
+/* Links */
+body a {
+  color: #2878a8;
+}
+
+body a:hover {
+  color: #18324a;
+}
+
+/* Navbar */
+.navbar {
+  background: #18324a;
+  border: none;
+}
+
+.navbar-brand,
+.navbar-nav > li > a {
+  color: #ffffff !important;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+  background: #2878a8 !important;
+}
+
+/* Tables */
+body table {
+  border-collapse: collapse;
+}
+
+body th {
+  color: #18324a;
+}
+
+/* Images */
+body img {
+  border: none;
+  box-shadow: none;
+}
