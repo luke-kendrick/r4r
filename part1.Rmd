@@ -3,7 +3,7 @@ output:
   revealjs::revealjs_presentation:
     theme: white
     transition: slide
-    self_contained: false
+    self_contained: true
     reveal_plugins: ["menu"]
     includes:
       after_body: home.html
