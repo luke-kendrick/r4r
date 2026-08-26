@@ -1,10 +1,12 @@
 ---
+title: "Ready_4_R"
+subtitle: "Welcome Week Workshop"
+author: "Created by Dr. Luke Kendrick, Department of Psychology Royal Holloway University of London"
 output:
   revealjs::revealjs_presentation:
     theme: white
     transition: slide
     self_contained: false
-    lib_dir: docs/part1_files
     reveal_plugins: ["menu"]
     includes:
       after_body: home.html
@@ -13,8 +15,104 @@ css: custom.css
 
 # Introduction
 
-This is Part 1.
+Workshop Aims:
 
-# Next Slide
+-   Provide an introduction to R and RStudio in preparation for PS2010 Psychological Research Methods.
 
-This is another slide.
+-   Help with navigation in RStudio.
+
+-   Provide an opportunity to practice using code.
+
+# About this Session
+
+-   The first hour will involve guided instruction on screen to help you (re)learn the basics of R and RStudio.
+
+-   Raise your hand at anytime if you need help, have a question, or get stuck.
+
+-   We are not able to offer technical support with R/RStudio on your personal device. For today, please use the campus PCs.
+
+-   The second hour will includes an activity for you to practice using basic R functions to learn about a data set.
+
+# R and RStudio
+
+![](images/pirate_spaced.png){width="87" height="87"}
+
+Rrrrr is not only the noise a pirate makes...
+
+R is also programming language.
+
+RStudio is the interface/program you'll use to enter the code and work with data.
+
+![](images/RStudio.png){width="161" height="56"}
+
+# Open RStudio I
+
+-   Look for this logo:
+
+![](images/clipboard-3796714733.png){width="161"}
+
+-   You want to make sure you open RStudio and not "R" which also exists on the computer. That runs in the background. Make sure you see the word **studio**!
+
+# Open RStudio II
+
+When you first open RStudio it should look like this:
+
+![](images/rstudio1.jpg){width="700"}
+
+# Test
+
+```r
+test code
+```
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const copyIcon = `
+    <svg width="13" height="13" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </svg>`;
+
+  const checkIcon = `
+    <svg width="13" height="13" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>`;
+
+  document.querySelectorAll("pre code").forEach(function (codeBlock) {
+
+    const pre = codeBlock.parentElement;
+
+    const button = document.createElement("button");
+    button.className = "copy-code-button";
+    button.type = "button";
+    button.innerHTML = copyIcon;
+    button.title = "Copy code";
+    button.setAttribute("aria-label", "Copy code");
+
+    button.addEventListener("click", async function () {
+
+      await navigator.clipboard.writeText(codeBlock.innerText);
+
+      button.innerHTML = checkIcon;
+      button.title = "Copied";
+
+      setTimeout(function () {
+        button.innerHTML = copyIcon;
+        button.title = "Copy code";
+      }, 1500);
+
+    });
+
+    pre.style.position = "relative";
+    pre.appendChild(button);
+
+  });
+
+});
+</script>

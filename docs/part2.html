@@ -13,7 +13,7 @@
 
 <meta name="date" content="2026-08-20" />
 
-<title>part2</title>
+<title>Activity</title>
 
 <script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -241,7 +241,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Workshop</a>
+      <a class="navbar-brand" href="index.html">Ready_4_R?</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -249,10 +249,10 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="part1.html">Part 1</a>
+  <a href="part1.html">Workshop Slides</a>
 </li>
 <li>
-  <a href="part2.html">Part 2</a>
+  <a href="part2.html">Workshop Activity</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -266,39 +266,275 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">part2</h1>
+<h1 class="title toc-ignore">Activity</h1>
 <h4 class="author">Luke Kendrick</h4>
 <h4 class="date">2026-08-20</h4>
 
 </div>
 
 
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting
-syntax for authoring HTML, PDF, and MS Word documents. For more details
-on using R Markdown see <a href="http://rmarkdown.rstudio.com"
-class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be
-generated that includes both content as well as the output of any
-embedded R code chunks within the document. You can embed an R code
-chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
+<div id="practical-task-data-handling-skills" class="section level1">
+<h1>Practical Task: Data Handling Skills</h1>
+<p><strong>Aims:</strong></p>
+<ul>
+<li><p>Practice importing a .csv data file into RStudio using
+<code>read_csv()</code></p></li>
+<li><p>Practice inspecting your data in RStudio.</p></li>
+<li><p>Use different data wrangling functions to develop your data
+handling skills.</p></li>
+<li><p>Check basic summary statistics.</p></li>
+</ul>
+<div id="exercise-1-import-the-data" class="section level2">
+<h2>Exercise 1: Import the Data</h2>
+<p><strong>Import the Data File <code>guess_who.csv</code></strong></p>
+<p>Before you begin, you will need the tidyverse package loaded.</p>
+<pre class="r"><code>install.packages(&quot;tidyverse&quot;) #install tidyverse if you do not have it.
+library(tidyverse) #loads tidyverse.</code></pre>
+<p>Next import the data file and store it as an object called
+<code>dataset</code>.</p>
+<pre class="r"><code>dataset &lt;- read_csv(&quot;guess_who.csv&quot;)</code></pre>
+<p>If you see an error saying cannot find function
+<code>read_csv()</code> this usually means you have not loaded (or
+installed) the tidyverse package.</p>
 </div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="part2_files/figure-html/pressure-1.png" alt="" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the
-code chunk to prevent printing of the R code that generated the
-plot.</p>
+<div id="exercise-2-inspect-and-check-your-data" class="section level2">
+<h2>Exercise 2: Inspect and Check Your Data</h2>
+<p><strong>Take a look at your newly imported data file</strong></p>
+<p>Check the top right panel (the environment) and also use the code
+below to inspect your data set.</p>
+<pre class="r"><code>view(dataset) # this will open the data in a new tab.
+names(dataset) # this will show the variable names.</code></pre>
+<p>It is really important to look at the variable names as you’ll be
+using them in code later on.</p>
+<p>Answer Question 2.1 - 2.2 on your worksheet.</p>
+</div>
+<div id="exercise-3-change-a-variable-name" class="section level2">
+<h2>Exercise 3: Change a Variable Name</h2>
+<p><strong>One of the variable names is quite long. This can be annoying
+if we have to keep typing it out</strong></p>
+<p>Change the variable name <code>do_you_own_a_pet</code> to
+<code>pet</code>. The <code>rename()</code> function will let you rename
+a variable.</p>
+<pre class="r"><code>dataset &lt;- dataset %&gt;%
+  rename(pet = do_you_own_a_pet)</code></pre>
+<p>Check it has worked:</p>
+<pre class="r"><code>names(dataset) # ask for the variable names again</code></pre>
+</div>
+<div id="exercise-4-remove-a-variable" class="section level2">
+<h2>Exercise 4: Remove a Variable</h2>
+<p><strong>We do not really care about the <code>age</code> variable for
+the next few exercises.</strong></p>
+<p>Let’s remove it.</p>
+<p>The code below will create a new object (once we start removing
+things, it is best to keep the original data file called
+<code>dataset</code> in the environment)</p>
+<pre class="r"><code>mydata &lt;- dataset %&gt;%
+  select(-age)</code></pre>
+<p>This code will:</p>
+<ul>
+<li><p>Create a new object called <code>mydata</code>.</p></li>
+<li><p>Take our original data called <code>dataset</code></p></li>
+<li><p>“And then” <code>%&gt;%</code></p></li>
+<li><p>Use the select() function to remove <code>age</code> by placing a
+minus symbol <code>-</code> in front of it.</p></li>
+</ul>
+<p>From now on, we will use the object called <code>mydata</code> and
+not the original data set.</p>
+</div>
+<div id="exercise-5-filter-cases" class="section level2">
+<h2>Exercise 5: Filter Cases</h2>
+<p><strong>We can select particular cases in our data set</strong></p>
+<p>For example, I could ask: how many people were from the city of
+Birmingham using the code below:</p>
+<pre class="r"><code>mydata %&gt;%
+  filter(city == &quot;birmingham&quot;) %&gt;%
+  count()</code></pre>
+<p>Check the console (bottom left panel) for the answer.</p>
+<p>This code will:</p>
+<ul>
+<li><p>Take <code>mydata</code> and then…</p></li>
+<li><p>Filter it by the <code>city</code> variable.</p></li>
+<li><p>We use a double equals symbol <code>==</code> to specify an exact
+match.</p></li>
+<li><p>I’ve added “birmingham” in speech marks. Note it is lowercase as
+to match the data set and then…</p></li>
+<li><p>count() the number of data points.</p></li>
+</ul>
+<p>Adapt the code above to answer question 5.1 on the worksheet.</p>
+</div>
+<div id="exercise-6-guess-who" class="section level2">
+<h2>Exercise 6: Guess Who?</h2>
+<p><strong>We can filter based on multiple criteria</strong>.</p>
+<p>The code below will show us someone who is from Brighton, has a dog,
+and does not drink coffee.</p>
+<pre class="r"><code>mydata %&gt;%
+  filter(city == &quot;brighton&quot;, pet == &quot;dog&quot;, coffee == 0)</code></pre>
+<p>We can also use less than/more than symbols to filter data, For
+example, this will show all people who have a maths enjoyment score of
+less than 20:</p>
+<pre class="r"><code>mydata %&gt;%
+  filter(maths &lt; 20)</code></pre>
+<p>Use what you have learned above and adapt your code to play GUESS
+WHO? and complete questions 6.1-6.2 on the worksheet.</p>
+</div>
+<div id="exercise-7-create-a-new-variable" class="section level2">
+<h2>Exercise 7: Create a New Variable</h2>
+<p><strong>Sometimes we might want to compute new scores or
+variables</strong></p>
+<p>Add up the three enjoyment scores for <code>maths</code>,
+<code>science</code>, and <code>art</code> to create an overall score
+called <code>total_score</code>.</p>
+<pre class="r"><code>mydata &lt;- mydata %&gt;%
+  mutate(total_score = maths + science + art)</code></pre>
+<p>This code will:</p>
+<ul>
+<li><p>Take <code>mydata</code> to overwrite it (ready to add the new
+variable) and then…</p></li>
+<li><p>Use the <code>mutate()</code> function to create a new variable
+named <code>total_score</code> which should equal <code>=</code>
+<code>maths</code> <code>+</code> <code>science</code> <code>+</code>
+<code>art</code>.</p></li>
+</ul>
+<p>View the data set and look for the new column to see it has
+worked.</p>
+<pre class="r"><code>view(mydata)</code></pre>
+<p>Now, we can look at who had the highest and lowest total enjoyment
+score.</p>
+<p><code>slice_min</code> will find the row which has the lowest
+score:</p>
+<pre class="r"><code>mydata %&gt;%
+  slice_min(total_score)</code></pre>
+<p><code>slice_max</code> will find the row which has the highest
+score:</p>
+<pre class="r"><code>mydata %&gt;%
+  slice_max(total_score)</code></pre>
+<p>Answer questions 7.1-7.2 on the worksheet.</p>
+</div>
+<div id="exercise-8-counting-and-removing-missing-data"
+class="section level2">
+<h2>Exercise 8: Counting and Removing Missing Data</h2>
+<p><strong>Real data sets often are missing data points</strong></p>
+<p>Different people have differing views on how to treat missing data
+points. For today, we will just identify and remove any. If you view the
+data, you might notice there are some blanks for <code>degree</code> as
+not everyone is studying for one.</p>
+<pre class="r"><code>sum(is.na(mydata$degree))</code></pre>
+<p>This code will:</p>
+<ul>
+<li><p>Calculate the total number using <code>sum()</code> of…</p></li>
+<li><p>Any missing data points (R calls these
+<code>is.na</code>)</p></li>
+<li><p>We can then direct to a particular column using
+<code>mydata$degree</code>. This essentially means “look in
+<code>mydata</code> and then the column called <code>degree</code>. We
+use the dollar sign <code>$</code> to specify the column.</p></li>
+</ul>
+<p>If we want to remove them, we can use <code>filter()</code>
+again!</p>
+<pre class="r"><code>mydata &lt;- mydata %&gt;% 
+  filter(!is.na(degree))</code></pre>
+<p>Note: this will overwrite <code>mydata</code> and remove the
+cases.</p>
+<p>Answer question 8.1 on the worksheet.</p>
+</div>
+<div id="exercise-9-summary-statistics" class="section level2">
+<h2>Exercise 9: Summary Statistics</h2>
+<p><strong>We might want to know What was the average enjoyment
+score?</strong></p>
+<p>We can use this code to look across the data set as a whole:</p>
+<pre class="r"><code>summary(mydata)</code></pre>
+<p>Look through the output in the console (bottom left panel) and answer
+questions 9.1-9.3 on the worksheet.</p>
+</div>
+<div id="exercise-10-fixing-lukes-broken-code" class="section level2">
+<h2>Exercise 10: Fixing Luke’s Broken Code</h2>
+<p>Help!! My code below is not working. I need your help to fix it…</p>
+<p>Fix the code below to work out how many coffees were drunk by the
+person from canterbury and is studying medicine. Try running the code
+first and then work out why it doesn’t work!</p>
+<pre class="r"><code>mydata %&gt;%
+  filter(city = &quot;canterburY&quot;, degree == medicine)</code></pre>
+<p>Fix the code below to work out the name of the person who is from
+London, has a hamster, studies psychology, and did not drink coffee. Try
+running the code first and then work out why it doesn’t work!</p>
+<pre class="r"><code>mydata =
+  filter(city == &quot;London&quot;, pet == &quot;hamsta&quot;, degree == &quot;psychology&quot;, coffee &gt;1)</code></pre>
+<p>Answer questions 10.1-10.2 on the worksheet.</p>
+<p>If you get stuck, use the hints below.</p>
+<hr />
+<details>
+<summary>
+👀 Click for a hint
+</summary>
+<ul>
+<li><p>Check for spelling errors: there are two of them.</p></li>
+<li><p>Make sure to use double equals when specifying a label
+<code>==</code>.</p></li>
+<li><p>Use quote marks when necessary. Some are missing.</p></li>
+<li><p>Code is case sensitive. There is a capital letter where there
+shouldn’t be one.</p></li>
+<li><p>Use symbols correctly. We want to use the pipe %&gt;% before we
+filter.</p></li>
+<li><p>Use symbols correctly. More than <code>&gt;</code> is not the
+same as <code>&lt;</code>.</p></li>
+</ul>
+</details>
+<hr />
+<hr />
+<p><strong>Well Done. You have reached the end of the
+workshop.</strong></p>
+<hr />
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const copyIcon = `
+    <svg width="16" height="16" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </svg>`;
+
+  const checkIcon = `
+    <svg width="16" height="16" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>`;
+
+  document.querySelectorAll("pre code").forEach(function (codeBlock) {
+
+    const pre = codeBlock.parentElement;
+
+    const button = document.createElement("button");
+    button.className = "copy-code-button";
+    button.type = "button";
+    button.innerHTML = copyIcon;
+    button.title = "Copy code";
+    button.setAttribute("aria-label", "Copy code");
+
+    button.addEventListener("click", async function () {
+
+      await navigator.clipboard.writeText(codeBlock.innerText);
+
+      button.innerHTML = checkIcon;
+      button.title = "Copied";
+
+      setTimeout(function () {
+        button.innerHTML = copyIcon;
+        button.title = "Copy code";
+      }, 1500);
+
+    });
+
+    pre.style.position = "relative";
+    pre.appendChild(button);
+
+  });
+
+});
+</script>
+</div>
 </div>
 
 

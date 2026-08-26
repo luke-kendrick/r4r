@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>part1.knit</title>
+  <meta name="author" content="Created by Dr. Luke Kendrick, Department of Psychology Royal Holloway University of London" />
+  <title>Ready_4_R</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="part1_files/reveal.js-4.2.1/dist/reset.css">
-  <link rel="stylesheet" href="part1_files/reveal.js-4.2.1/dist/reveal.css">
+  <link rel="stylesheet" href="site_libs/reveal.js-4.2.1/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/reveal.js-4.2.1/dist/reveal.css">
 
   <style type="text/css">
     /* CSS from pandoc style.html() */
@@ -18,9 +19,73 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
-                  </style>
+            html { -webkit-text-size-adjust: 100%; }
+            pre > code.sourceCode { white-space: pre; position: relative; }
+            pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+            pre > code.sourceCode > span:empty { height: 1.2em; }
+            .sourceCode { overflow: visible; }
+            code.sourceCode > span { color: inherit; text-decoration: inherit; }
+            div.sourceCode { margin: 1em 0; }
+            pre.sourceCode { margin: 0; }
+            @media screen {
+            div.sourceCode { overflow: auto; }
+            }
+            @media print {
+            pre > code.sourceCode { white-space: pre-wrap; }
+            pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+            }
+            pre.numberSource code
+              { counter-reset: source-line 0; }
+            pre.numberSource code > span
+              { position: relative; left: -4em; counter-increment: source-line; }
+            pre.numberSource code > span > a:first-child::before
+              { content: counter(source-line);
+                position: relative; left: -1em; text-align: right; vertical-align: baseline;
+                border: none; display: inline-block;
+                -webkit-touch-callout: none; -webkit-user-select: none;
+                -khtml-user-select: none; -moz-user-select: none;
+                -ms-user-select: none; user-select: none;
+                padding: 0 4px; width: 4em;
+                color: #aaaaaa;
+              }
+            pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+            div.sourceCode
+              {   }
+            @media screen {
+            pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+            }
+            code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+            code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+            code span.at { color: #7d9029; } /* Attribute */
+            code span.bn { color: #40a070; } /* BaseN */
+            code span.bu { color: #008000; } /* BuiltIn */
+            code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+            code span.ch { color: #4070a0; } /* Char */
+            code span.cn { color: #880000; } /* Constant */
+            code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+            code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+            code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+            code span.dt { color: #902000; } /* DataType */
+            code span.dv { color: #40a070; } /* DecVal */
+            code span.er { color: #ff0000; font-weight: bold; } /* Error */
+            code span.ex { } /* Extension */
+            code span.fl { color: #40a070; } /* Float */
+            code span.fu { color: #06287e; } /* Function */
+            code span.im { color: #008000; font-weight: bold; } /* Import */
+            code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+            code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+            code span.op { color: #666666; } /* Operator */
+            code span.ot { color: #007020; } /* Other */
+            code span.pp { color: #bc7a00; } /* Preprocessor */
+            code span.sc { color: #4070a0; } /* SpecialChar */
+            code span.ss { color: #bb6688; } /* SpecialString */
+            code span.st { color: #4070a0; } /* String */
+            code span.va { color: #19177c; } /* Variable */
+            code span.vs { color: #4070a0; } /* VerbatimString */
+            code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+              </style>
 
-  <link rel="stylesheet" href="part1_files/reveal.js-4.2.1/dist/theme/white.css" id="theme">
+  <link rel="stylesheet" href="site_libs/reveal.js-4.2.1/dist/theme/white.css" id="theme">
 
 
   <style type="text/css">
@@ -62,31 +127,137 @@
   </style>
 
     <link rel="stylesheet" href="custom.css"/>
-    <script src="part1_files/header-attrs-2.30/header-attrs.js"></script>
-    <link href="part1_files/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
-    <link href="part1_files/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+    <script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
+    <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+    <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
+<section id="title-slide">
+  <h1 class="title">Ready_4_R</h1>
+  <h1 class="subtitle">Welcome Week Workshop</h1>
+  <h2 class="author">Created by Dr. Luke Kendrick, Department of
+Psychology Royal Holloway University of London</h2>
+</section>
 
 <section id="introduction" class="title-slide slide level1">
 <h1>Introduction</h1>
-<p>This is Part 1.</p>
+<p>Workshop Aims:</p>
+<ul>
+<li><p>Provide an introduction to R and RStudio in preparation for
+PS2010 Psychological Research Methods.</p></li>
+<li><p>Help with navigation in RStudio.</p></li>
+<li><p>Provide an opportunity to practice using code.</p></li>
+</ul>
 </section>
 
-<section id="next-slide" class="title-slide slide level1">
-<h1>Next Slide</h1>
-<p>This is another slide.</p>
+<section id="about-this-session" class="title-slide slide level1">
+<h1>About this Session</h1>
+<ul>
+<li><p>The first hour will involve guided instruction on screen to help
+you (re)learn the basics of R and RStudio.</p></li>
+<li><p>Raise your hand at anytime if you need help, have a question, or
+get stuck.</p></li>
+<li><p>We are not able to offer technical support with R/RStudio on your
+personal device. For today, please use the campus PCs.</p></li>
+<li><p>The second hour will includes an activity for you to practice
+using basic R functions to learn about a data set.</p></li>
+</ul>
+</section>
+
+<section id="r-and-rstudio" class="title-slide slide level1">
+<h1>R and RStudio</h1>
+<p><img data-src="images/pirate_spaced.png" width="87"
+height="87" /></p>
+<p>Rrrrr is not only the noise a pirate makes…</p>
+<p>R is also programming language.</p>
+<p>RStudio is the interface/program you’ll use to enter the code and
+work with data.</p>
+<p><img data-src="images/RStudio.png" width="161" height="56" /></p>
+</section>
+
+<section id="open-rstudio-i" class="title-slide slide level1">
+<h1>Open RStudio I</h1>
+<ul>
+<li>Look for this logo:</li>
+</ul>
+<p><img data-src="images/clipboard-3796714733.png" width="161" /></p>
+<ul>
+<li>You want to make sure you open RStudio and not “R” which also exists
+on the computer. That runs in the background. Make sure you see the word
+<strong>studio</strong>!</li>
+</ul>
+</section>
+
+<section id="open-rstudio-ii" class="title-slide slide level1">
+<h1>Open RStudio II</h1>
+<p>When you first open RStudio it should look like this:</p>
+<p><img data-src="images/rstudio1.jpg" width="700" /></p>
+</section>
+
+<section id="test" class="title-slide slide level1">
+<h1>Test</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>test code</span></code></pre></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const copyIcon = `
+    <svg width="13" height="13" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </svg>`;
+
+  const checkIcon = `
+    <svg width="13" height="13" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>`;
+
+  document.querySelectorAll("pre code").forEach(function (codeBlock) {
+
+    const pre = codeBlock.parentElement;
+
+    const button = document.createElement("button");
+    button.className = "copy-code-button";
+    button.type = "button";
+    button.innerHTML = copyIcon;
+    button.title = "Copy code";
+    button.setAttribute("aria-label", "Copy code");
+
+    button.addEventListener("click", async function () {
+
+      await navigator.clipboard.writeText(codeBlock.innerText);
+
+      button.innerHTML = checkIcon;
+      button.title = "Copied";
+
+      setTimeout(function () {
+        button.innerHTML = copyIcon;
+        button.title = "Copy code";
+      }, 1500);
+
+    });
+
+    pre.style.position = "relative";
+    pre.appendChild(button);
+
+  });
+
+});
+</script>
 </section>
     </div>
   </div>
 
-  <script src="part1_files/reveal.js-4.2.1/dist/reveal.js"></script>
+  <script src="site_libs/reveal.js-4.2.1/dist/reveal.js"></script>
   
   <!-- reveal.js plugins -->
-  <script src="part1_files/reveal.js-4.2.1/plugin/menu/menu.js"></script>
+  <script src="site_libs/reveal.js-4.2.1/plugin/menu/menu.js"></script>
   
   <script>
 
