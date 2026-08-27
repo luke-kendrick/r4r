@@ -2,11 +2,11 @@ output_dir: "docs"
 
 name: "Welcome Week Workshop"
 navbar:
-  title: "Ready_4_R?"
+  title: "Ready4R?"
   left:
     - text: "Home"
       href: index.html
-    - text: "Workshop Slides"
+    - text: "Tutorial Slides"
       href: part1.html
-    - text: "Workshop Activity"
+    - text: "Practice Activity"
       href: part2.html

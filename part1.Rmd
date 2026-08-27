@@ -1,7 +1,6 @@
 ---
-title: "Ready_4_R"
-subtitle: "Welcome Week Workshop"
-author: "Created by Dr. Luke Kendrick, Department of Psychology Royal Holloway University of London"
+title: "R4R? Guided Tutorial"
+author: "Dr. Luke Kendrick, Department of Psychology Royal Holloway University of London"
 output:
   revealjs::revealjs_presentation:
     theme: white
@@ -19,39 +18,44 @@ Workshop Aims:
 
 -   Provide an introduction to R and RStudio in preparation for PS2010 Psychological Research Methods.
 
--   Help with navigation in RStudio.
+-   Understand the layout and key features of RStudio
 
--   Provide an opportunity to practice using code.
+-   Understand the basics of using R code
+
+-   To begin working with data in RStudio and understand key terminology.
 
 # About this Session
 
--   The first hour will involve guided instruction on screen to help you (re)learn the basics of R and RStudio.
+-   The first part of the workshop involves a guided tutorial where you should follow along on screen.
 
--   Raise your hand at anytime if you need help, have a question, or get stuck.
+-   Raise your hand at anytime if you need help, have a question, or get stuck—someone will come over to assist you.
 
 -   We are not able to offer technical support with R/RStudio on your personal device. For today, please use the campus PCs.
 
--   The second hour will includes an activity for you to practice using basic R functions to learn about a data set.
+-   The second part of the workshop involves a practice activity to help you feel more confident with R before lecture begin next week.
 
 # R and RStudio
 
-![](images/pirate_spaced.png){width="87" height="87"}
+![](images/pirate_spaced.png){width="128" height="134"}
 
-Rrrrr is not only the noise a pirate makes...
+-   Rrrrr is not only the noise a pirate makes...
 
-R is also programming language.
+-   R is also programming language. You'll also use RStudio.
 
-RStudio is the interface/program you'll use to enter the code and work with data.
+-   R and RStudio are not the same thing:
 
-![](images/RStudio.png){width="161" height="56"}
+    -   **`R = the language`**
+
+    -   **`RStudio = the program.`**
 
 # Open RStudio I
 
 -   Look for this logo:
 
-![](images/clipboard-3796714733.png){width="161"}
+![](images/clipboard-3796714733.png){width="214" height="76"}
 
--   You want to make sure you open RStudio and not "R" which also exists on the computer. That runs in the background. Make sure you see the word **studio**!
+-   You want to make sure you open RStudio and not "R" which also exists on the computer. That runs in the background.
+-   Make sure you see the word **studio**!
 
 # Open RStudio II
 
@@ -59,13 +63,218 @@ When you first open RStudio it should look like this:
 
 ![](images/rstudio1.jpg){width="700"}
 
-# Test
+# RStudio Layout I
 
-```r
-test code
+-   When RStudio opens you'll see **three** panels. We actually want a fourth open.
+
+-   Open a new script by going to: `File` \> `New File` \> `R Script`
+
+-   You can also use:
+
+    -   `CTRL` + `SHIFT` + `N` (windows)
+
+    -   `CMD` + `SHIFT` + `N` (mac)
+
+# RStudio Layout II
+
+Now your RStudio should look like this. There are **four** panels:
+
+![](images/rstudio2.jpg){width="700" height="461"}
+
+# RStudio Layout III
+
+You need to learn what each panel does. We will go through them one by one.
+
+![](images/rstudio_layout_v1.png){width="785"}
+
+# Script Panel
+
+![](images/rstudio_layout_v1.png){width="420"}
+
+-   The R script is the top left and is an editable space where you can type, enter, and run your code. You can save and share your R script, a bit like a Word document.
+
+# Console Panel
+
+![](images/rstudio_layout_v1.png){width="420"}
+
+-   The R console is the bottom left panel. Think of this an “results” panel. This is where you can read the results of your code (or an error message if your code did not work!). Technically you can type your code into this panel, I’d recommend that you never do this because it isn’t possible to save it.
+
+# Environment Panel
+
+![](images/rstudio_layout_v1.png){width="420"}
+
+-   The environment panel is the top right panel. It can be helpful to think of this as a bit like a memory space where RStudio will keep hold of any objects/data/information that you ask it to. You’ll learn more about saving things to the environment later in this chapter.
+
+# Miscellaneous Panel
+
+![](images/rstudio_layout_v1.png){width="420"}
+
+-   The bottom right panel is what I call the miscellaneous panel. It has a few different purposes that include viewing files, plots, packages, or finding help.
+-   Also known as Files/Plots/Packages/Help/Viewer panel.
+
+# RStudio Layout Summary
+
+-   As you progress through this workshop and PS2010, you'll learn more about what these panels can do.
+
+-   A key take home message is that you need **four** of them and that you enter your code in the script (top left) panel.
+
+# Using R Code I
+
+-   Coding sounds scary. However, just think of it as a series of instructions.
+-   Like with any language there are rules and a structure.
+-   It can be a bit quirky to begin with, even the smallest mistakes can change the meaning.
+
+# Using R Code II
+
+-   A typo or incorrectly placed symbol could mean your code does not work—proof read it carefully and take your time.
+
+![](images/grandma.png){width="533"}
+
+# R Code Basics I
+
+-   In RStudio find the script panel (top left).
+-   Enter the following code:
+
+``` r
+date()
 ```
 
+-   When ready use your keyboard to press **`CTRL`** + **`ENTER`**.
+-   **`CMND`** + **`ENTER`** on a mac.
 
+Once done, check the console panel (bottom left) and you should see today's date as the result!
+
+# R Code Basics II
+
+-   Congratulations! You've run your first bit of code. Now what...
+-   RStudio is a bit like a very fancy calculator.
+-   Try and run this code:
+
+``` r
+33 + 67
+```
+
+-   Or something more complex:
+
+``` r
+12345*54321
+```
+
+# R Code Basics III
+
+-   In case you have wondered the answer to 12345 x 54321 it is 670592745.
+
+    -   Note that we use an asterisk `*` for multiplication.
+    -   You can use `/` for division.
+
+-   Now you should begin to understand the very basics of running code (giving a command or instruction) and then checking the console to see the output, results, or answer.
+
+# Objects and the Environment
+
+-   An object is a key feature of RStudio. An object is a bit like a box.
+-   We can store or place something in our box and then place it in a storage unit, like a warehouse (this analogy will make sense soon!).
+
+![](images/thedigitalartist-cardboard-box-1276929_1920.jpg){width="282"}
+
+# Creating an Object I
+
+-   In RStudio we can assign a value or data to an object. However, you will need to create and name your box. Let’s work through an example.
+
+# Creating an Object II
+
+``` r
+box <- "chocs"
+```
+
+-   `box` is the name of the object ready for something to be placed inside. You could call a box anything you like, I could have called it `myobject` or `data` if it contained some data.
+
+# Creating an Object III
+
+``` r
+box <- "chocs"
+```
+
+-   Next there are two individual symbols, which when combined become an assignment operator. It is essentially an arrow `<-` made up of a less than sign `<` and a dash `-`
+-   This means anything on the right side of the arrow will be placed into the object (or our newly named box).
+
+# Creating an Object IV
+
+``` r
+box <- "chocs"
+```
+
+-   `"chocs"` is what I've put in the box. A box of chocolates.
+-   It is text information (rather than numbers or data) and so it is in speech marks in our code.
+-   Run the code now and then check the environment panel (top right).
+
+# Creating an Object V
+
+-   If you look at the top right panel (called the environment), you should spot that an object has appeared called `box`. That’s your newly created object.
+-   The environment panel acts a bit like a warehouse or storage unit for our boxes (see, I told you the analogy would make sense…).
+-   When conducting data analysis, you may end up with quite a few objects stored in the environment.
+
+# Creating More Objects
+
+- Almost anything can be committed to an object in RStudio. For example, run and adapt the code below. Change “Luke” to your own name! Then check that your environment to see these additional objects.
+
+```r
+my_name <- "Luke"
+answer <- 12345*54321
+pi <- 3.14
+```
+
+# print()
+
+You can check what is in a box easily by running this code:
+
+```r
+print(box)
+```
+
+Change `box` to the name of the other objects: `my_name`, `answer`, `pi` and check the console each time you run the code.
+
+# Naming Objects I
+
+- Try to keep object names short.
+- Often you will need to refer to them in your code, and typing out long names is time consuming.
+- Always use lowercase letters and use an underscore `_` if you need a space (or just avoid spaces if you can).
+- For example:
+```r
+name <- "Luke"
+```
+
+- `name` is shorter than `my_name`
+
+# Naming Objects II
+
+```r
+ans <- answer
+```
+
+- `ans` is shorter than `answer`
+- You might notice here you've put an existing box into a new box called `ans`.
+
+# Code is Case Sensitive
+
+Try running:
+
+```r
+print(Name)
+```
+
+- This won't wont work because R is not expecting an uppercase `N`
+
+- Use this instead:
+
+```r
+print(name)
+```
+
+# Functions and Arguments
+
+
+
+```{=html}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -116,3 +325,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+```

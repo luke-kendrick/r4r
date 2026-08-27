@@ -1,12 +1,27 @@
 /* ================================
+   Core palette
+   ================================ */
+
+:root {
+  --primary: #247C8A;
+  --primary-dark: #154A52;
+  --text: #07181B;
+  --background: #F7F9FB;
+  --surface: #FFFFFF;
+  --border: #D6E2E5;
+  --muted: #667A7E;
+}
+
+
+/* ================================
    Clean Modern Reveal.js Theme
    ================================ */
 
 .reveal {
   font-family: "Aptos", "Segoe UI", Arial, sans-serif;
   font-size: 32px;
-  color: #243447;
-  background: #f7f9fb;
+  color: var(--text);
+  background: var(--background);
 }
 
 /* Headings */
@@ -15,7 +30,7 @@
 .reveal h3 {
   font-family: "Aptos Display", "Segoe UI", Arial, sans-serif;
   font-weight: 600;
-  color: #18324a;
+  color: var(--text);
   text-transform: none;
   letter-spacing: -0.02em;
 }
@@ -40,11 +55,12 @@
 
 /* Links */
 .reveal a {
-  color: #2878a8;
+  color: var(--primary);
   text-decoration: none;
 }
 
 .reveal a:hover {
+  color: var(--primary-dark);
   text-decoration: underline;
 }
 
@@ -77,6 +93,7 @@
 /* Slide number */
 .reveal .slide-number {
   font-size: 0.6em;
+  color: var(--text);
 }
 
 
@@ -91,8 +108,8 @@
   z-index: 1000;
   padding: 7px 14px;
   background: transparent;
-  color: #18324a !important;
-  border: 1px solid #9aabb8;
+  color: var(--primary-dark) !important;
+  border: 1px solid var(--primary);
   border-radius: 5px;
   font-family: "Aptos", "Segoe UI", Arial, sans-serif;
   font-size: 15px;
@@ -102,9 +119,9 @@
 }
 
 .home-button:hover {
-  background: #18324a;
+  background: var(--primary);
   color: white !important;
-  border-color: #18324a;
+  border-color: var(--primary);
 }
 
 
@@ -115,18 +132,18 @@
 .reveal .slide-menu-button {
   top: 60px !important;
   bottom: auto !important;
+  color: var(--primary-dark) !important;
 }
 
 
 /* =========================================
    Normal R Markdown pages
-   Match the Reveal.js presentation
    ========================================= */
 
 body {
   font-family: "Aptos", "Segoe UI", Arial, sans-serif;
-  color: #243447;
-  background: #ffffff;
+  color: var(--text);
+  background: var(--surface);
   font-size: 17px;
   line-height: 1.6;
 }
@@ -142,7 +159,7 @@ body h2,
 body h3,
 body h4 {
   font-family: "Aptos Display", "Segoe UI", Arial, sans-serif;
-  color: #18324a;
+  color: var(--text);
   font-weight: 600;
   text-transform: none;
   letter-spacing: -0.02em;
@@ -163,43 +180,65 @@ body h3 {
 
 /* Links */
 body a {
-  color: #2878a8;
+  color: var(--primary);
 }
 
 body a:hover {
-  color: #18324a;
+  color: var(--primary-dark);
 }
 
-/* Navbar */
+
+/* ================================
+   Navbar
+   ================================ */
+
 .navbar {
-  background: #18324a;
+  background: var(--primary);
   border: none;
 }
 
 .navbar-brand,
 .navbar-nav > li > a {
-  color: #ffffff !important;
+  color: #FFFFFF !important;
 }
 
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus {
-  background: #2878a8 !important;
+  background: var(--primary-dark) !important;
 }
 
-/* Tables */
+/* Active navbar page */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: var(--primary-dark) !important;
+  color: #FFFFFF !important;
+}
+
+
+/* ================================
+   Tables
+   ================================ */
+
 body table {
   border-collapse: collapse;
 }
 
 body th {
-  color: #18324a;
+  color: var(--text);
 }
 
-/* Images */
+
+/* ================================
+   Images
+   ================================ */
+
 body img {
   border: none;
   box-shadow: none;
 }
+
+
 /* ================================
    Presentation navigation arrows
    ================================ */
@@ -209,44 +248,41 @@ body img {
   bottom: 25px !important;
 }
 
-/* Left and right arrows */
 .reveal .controls .navigate-left,
 .reveal .controls .navigate-right {
   transform: scale(1.6) !important;
-  color: #18324a !important;
+  color: var(--primary-dark) !important;
 }
 
-/* Hover */
 .reveal .controls .navigate-left:hover,
 .reveal .controls .navigate-right:hover {
-  color: #2878a8 !important;
+  color: var(--primary) !important;
 }
 
-/* Remove vertical navigation */
 .reveal .controls .navigate-up,
 .reveal .controls .navigate-down {
   display: none !important;
 }
+
+
 /* ================================
-   Active navbar page
+   Title slide author
    ================================ */
 
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  background-color: #2878a8 !important;
-  color: #ffffff !important;
-}
-/* Title slide author */
 .reveal #title-slide .author {
   font-size: 0.65em;
   font-weight: 400;
   margin-top: 1.5em;
+  color: var(--text);
 }
+
+
 /* Hide Home button while slide menu is open */
 body:has(.slide-menu.active) .home-button {
   display: none;
 }
+
+
 /* ================================
    Copy code button
    ================================ */
@@ -266,10 +302,10 @@ body:has(.slide-menu.active) .home-button {
 
   padding: 0;
 
-  background: rgba(255, 255, 255, 0.9);
-  color: #607080;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--primary-dark);
 
-  border: 1px solid #d6dde3;
+  border: 1px solid var(--border);
   border-radius: 6px;
 
   cursor: pointer;
@@ -281,14 +317,16 @@ body:has(.slide-menu.active) .home-button {
 }
 
 .copy-code-button:hover {
-  background: #ffffff;
-  color: #18324a;
-  border-color: #9aabb8;
+  background: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
 }
 
 .copy-code-button svg {
   display: block;
 }
+
+
 /* ================================
    Cleaner code blocks
    ================================ */
@@ -307,17 +345,19 @@ pre code {
   word-break: normal !important;
 }
 
-/* Keep copy icon tidy */
 .copy-code-button {
   overflow: hidden !important;
 }
+
+
 /* ================================
    Reveal slide code blocks
    ================================ */
 
 .reveal pre {
-  background: #f3f6f8 !important;
-  border: 1px solid #d6dde3 !important;
+  background: #F1F7F8 !important;
+  border: 1px solid var(--border) !important;
+  border-left: 4px solid var(--primary) !important;
   border-radius: 8px !important;
   padding: 14px 42px 14px 16px !important;
   box-shadow: none !important;
@@ -325,10 +365,12 @@ pre code {
 
 .reveal pre code {
   background: transparent !important;
-  color: #243447 !important;
+  color: var(--text) !important;
   font-size: 0.8em;
   line-height: 1.4;
 }
+
+
 /* Larger copy button on presentation slides */
 .reveal .copy-code-button {
   width: 32px;
@@ -341,4 +383,36 @@ pre code {
 .reveal .copy-code-button svg {
   width: 17px;
   height: 17px;
+}
+/* Slightly smaller text for busy slides */
+.reveal section.compact {
+  font-size: 0.82em;
+}
+/* ================================
+   Consistent slide alignment
+   ================================ */
+
+.reveal .slides section {
+  text-align: left;
+}
+
+/* Keep the main presentation title slide centred */
+.reveal #title-slide {
+  text-align: center;
+}
+/* Centre all images on slides */
+.reveal .slides section img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Inline code on slides */
+.reveal p code,
+.reveal li code {
+  background: #E8F3F4;
+  color: #154A52;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 500;
 }

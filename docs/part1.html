@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Created by Dr. Luke Kendrick, Department of Psychology Royal Holloway University of London" />
-  <title>Ready_4_R</title>
+  <meta name="author" content="Dr. Luke Kendrick, Department of Psychology Royal Holloway University of London" />
+  <title>R4R? Guided Tutorial</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -136,10 +136,9 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Ready_4_R</h1>
-  <h1 class="subtitle">Welcome Week Workshop</h1>
-  <h2 class="author">Created by Dr. Luke Kendrick, Department of
-Psychology Royal Holloway University of London</h2>
+  <h1 class="title">R4R? Guided Tutorial</h1>
+  <h2 class="author">Dr. Luke Kendrick, Department of Psychology Royal
+Holloway University of London</h2>
 </section>
 
 <section id="introduction" class="title-slide slide level1">
@@ -148,34 +147,41 @@ Psychology Royal Holloway University of London</h2>
 <ul>
 <li><p>Provide an introduction to R and RStudio in preparation for
 PS2010 Psychological Research Methods.</p></li>
-<li><p>Help with navigation in RStudio.</p></li>
-<li><p>Provide an opportunity to practice using code.</p></li>
+<li><p>Understand the layout and key features of RStudio</p></li>
+<li><p>Understand the basics of using R code</p></li>
+<li><p>To begin working with data in RStudio and understand key
+terminology.</p></li>
 </ul>
 </section>
 
 <section id="about-this-session" class="title-slide slide level1">
 <h1>About this Session</h1>
 <ul>
-<li><p>The first hour will involve guided instruction on screen to help
-you (re)learn the basics of R and RStudio.</p></li>
+<li><p>The first part of the workshop involves a guided tutorial where
+you should follow along on screen.</p></li>
 <li><p>Raise your hand at anytime if you need help, have a question, or
-get stuck.</p></li>
+get stuck—someone will come over to assist you.</p></li>
 <li><p>We are not able to offer technical support with R/RStudio on your
 personal device. For today, please use the campus PCs.</p></li>
-<li><p>The second hour will includes an activity for you to practice
-using basic R functions to learn about a data set.</p></li>
+<li><p>The second part of the workshop involves a practice activity to
+help you feel more confident with R before lecture begin next
+week.</p></li>
 </ul>
 </section>
 
 <section id="r-and-rstudio" class="title-slide slide level1">
 <h1>R and RStudio</h1>
-<p><img data-src="images/pirate_spaced.png" width="87"
-height="87" /></p>
-<p>Rrrrr is not only the noise a pirate makes…</p>
-<p>R is also programming language.</p>
-<p>RStudio is the interface/program you’ll use to enter the code and
-work with data.</p>
-<p><img data-src="images/RStudio.png" width="161" height="56" /></p>
+<p><img data-src="images/pirate_spaced.png" width="128"
+height="134" /></p>
+<ul>
+<li><p>Rrrrr is not only the noise a pirate makes…</p></li>
+<li><p>R is also programming language. You’ll also use RStudio.</p></li>
+<li><p>R and RStudio are not the same thing:</p>
+<ul>
+<li><p><strong><code>R = the language</code></strong></p></li>
+<li><p><strong><code>RStudio = the program.</code></strong></p></li>
+</ul></li>
+</ul>
 </section>
 
 <section id="open-rstudio-i" class="title-slide slide level1">
@@ -183,11 +189,12 @@ work with data.</p>
 <ul>
 <li>Look for this logo:</li>
 </ul>
-<p><img data-src="images/clipboard-3796714733.png" width="161" /></p>
+<p><img data-src="images/clipboard-3796714733.png" width="214"
+height="76" /></p>
 <ul>
 <li>You want to make sure you open RStudio and not “R” which also exists
-on the computer. That runs in the background. Make sure you see the word
-<strong>studio</strong>!</li>
+on the computer. That runs in the background.</li>
+<li>Make sure you see the word <strong>studio</strong>!</li>
 </ul>
 </section>
 
@@ -197,9 +204,293 @@ on the computer. That runs in the background. Make sure you see the word
 <p><img data-src="images/rstudio1.jpg" width="700" /></p>
 </section>
 
-<section id="test" class="title-slide slide level1">
-<h1>Test</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>test code</span></code></pre></div>
+<section id="rstudio-layout-i" class="title-slide slide level1">
+<h1>RStudio Layout I</h1>
+<ul>
+<li><p>When RStudio opens you’ll see <strong>three</strong> panels. We
+actually want a fourth open.</p></li>
+<li><p>Open a new script by going to: <code>File</code> &gt;
+<code>New File</code> &gt; <code>R Script</code></p></li>
+<li><p>You can also use:</p>
+<ul>
+<li><p><code>CTRL</code> + <code>SHIFT</code> + <code>N</code>
+(windows)</p></li>
+<li><p><code>CMD</code> + <code>SHIFT</code> + <code>N</code>
+(mac)</p></li>
+</ul></li>
+</ul>
+</section>
+
+<section id="rstudio-layout-ii" class="title-slide slide level1">
+<h1>RStudio Layout II</h1>
+<p>Now your RStudio should look like this. There are
+<strong>four</strong> panels:</p>
+<p><img data-src="images/rstudio2.jpg" width="700" height="461" /></p>
+</section>
+
+<section id="rstudio-layout-iii" class="title-slide slide level1">
+<h1>RStudio Layout III</h1>
+<p>You need to learn what each panel does. We will go through them one
+by one.</p>
+<p><img data-src="images/rstudio_layout_v1.png" width="785" /></p>
+</section>
+
+<section id="script-panel" class="title-slide slide level1">
+<h1>Script Panel</h1>
+<p><img data-src="images/rstudio_layout_v1.png" width="420" /></p>
+<ul>
+<li>The R script is the top left and is an editable space where you can
+type, enter, and run your code. You can save and share your R script, a
+bit like a Word document.</li>
+</ul>
+</section>
+
+<section id="console-panel" class="title-slide slide level1">
+<h1>Console Panel</h1>
+<p><img data-src="images/rstudio_layout_v1.png" width="420" /></p>
+<ul>
+<li>The R console is the bottom left panel. Think of this an “results”
+panel. This is where you can read the results of your code (or an error
+message if your code did not work!). Technically you can type your code
+into this panel, I’d recommend that you never do this because it isn’t
+possible to save it.</li>
+</ul>
+</section>
+
+<section id="environment-panel" class="title-slide slide level1">
+<h1>Environment Panel</h1>
+<p><img data-src="images/rstudio_layout_v1.png" width="420" /></p>
+<ul>
+<li>The environment panel is the top right panel. It can be helpful to
+think of this as a bit like a memory space where RStudio will keep hold
+of any objects/data/information that you ask it to. You’ll learn more
+about saving things to the environment later in this chapter.</li>
+</ul>
+</section>
+
+<section id="miscellaneous-panel" class="title-slide slide level1">
+<h1>Miscellaneous Panel</h1>
+<p><img data-src="images/rstudio_layout_v1.png" width="420" /></p>
+<ul>
+<li>The bottom right panel is what I call the miscellaneous panel. It
+has a few different purposes that include viewing files, plots,
+packages, or finding help.</li>
+<li>Also known as Files/Plots/Packages/Help/Viewer panel.</li>
+</ul>
+</section>
+
+<section id="rstudio-layout-summary" class="title-slide slide level1">
+<h1>RStudio Layout Summary</h1>
+<ul>
+<li><p>As you progress through this workshop and PS2010, you’ll learn
+more about what these panels can do.</p></li>
+<li><p>A key take home message is that you need <strong>four</strong> of
+them and that you enter your code in the script (top left)
+panel.</p></li>
+</ul>
+</section>
+
+<section id="using-r-code-i" class="title-slide slide level1">
+<h1>Using R Code I</h1>
+<ul>
+<li>Coding sounds scary. However, just think of it as a series of
+instructions.</li>
+<li>Like with any language there are rules and a structure.</li>
+<li>It can be a bit quirky to begin with, even the smallest mistakes can
+change the meaning.</li>
+</ul>
+</section>
+
+<section id="using-r-code-ii" class="title-slide slide level1">
+<h1>Using R Code II</h1>
+<ul>
+<li>A typo or incorrectly placed symbol could mean your code does not
+work—proof read it carefully and take your time.</li>
+</ul>
+<p><img data-src="images/grandma.png" width="533" /></p>
+</section>
+
+<section id="r-code-basics-i" class="title-slide slide level1">
+<h1>R Code Basics I</h1>
+<ul>
+<li>In RStudio find the script panel (top left).</li>
+<li>Enter the following code:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span>()</span></code></pre></div>
+<ul>
+<li>When ready use your keyboard to press
+<strong><code>CTRL</code></strong> +
+<strong><code>ENTER</code></strong>.</li>
+<li><strong><code>CMND</code></strong> +
+<strong><code>ENTER</code></strong> on a mac.</li>
+</ul>
+<p>Once done, check the console panel (bottom left) and you should see
+today’s date as the result!</p>
+</section>
+
+<section id="r-code-basics-ii" class="title-slide slide level1">
+<h1>R Code Basics II</h1>
+<ul>
+<li>Congratulations! You’ve run your first bit of code. Now what…</li>
+<li>RStudio is a bit like a very fancy calculator.</li>
+<li>Try and run this code:</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">33</span> <span class="sc">+</span> <span class="dv">67</span></span></code></pre></div>
+<ul>
+<li>Or something more complex:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">12345</span><span class="sc">*</span><span class="dv">54321</span></span></code></pre></div>
+</section>
+
+<section id="r-code-basics-iii" class="title-slide slide level1">
+<h1>R Code Basics III</h1>
+<ul>
+<li><p>In case you have wondered the answer to 12345 x 54321 it is
+670592745.</p>
+<ul>
+<li>Note that we use an asterisk <code>*</code> for multiplication.</li>
+<li>You can use <code>/</code> for division.</li>
+</ul></li>
+<li><p>Now you should begin to understand the very basics of running
+code (giving a command or instruction) and then checking the console to
+see the output, results, or answer.</p></li>
+</ul>
+</section>
+
+<section id="objects-and-the-environment"
+class="title-slide slide level1">
+<h1>Objects and the Environment</h1>
+<ul>
+<li>An object is a key feature of RStudio. An object is a bit like a
+box.</li>
+<li>We can store or place something in our box and then place it in a
+storage unit, like a warehouse (this analogy will make sense
+soon!).</li>
+</ul>
+<p><img
+data-src="images/thedigitalartist-cardboard-box-1276929_1920.jpg"
+width="282" /></p>
+</section>
+
+<section id="creating-an-object-i" class="title-slide slide level1">
+<h1>Creating an Object I</h1>
+<ul>
+<li>In RStudio we can assign a value or data to an object. However, you
+will need to create and name your box. Let’s work through an
+example.</li>
+</ul>
+</section>
+
+<section id="creating-an-object-ii" class="title-slide slide level1">
+<h1>Creating an Object II</h1>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>box <span class="ot">&lt;-</span> <span class="st">&quot;chocs&quot;</span></span></code></pre></div>
+<ul>
+<li><code>box</code> is the name of the object ready for something to be
+placed inside. You could call a box anything you like, I could have
+called it <code>myobject</code> or <code>data</code> if it contained
+some data.</li>
+</ul>
+</section>
+
+<section id="creating-an-object-iii" class="title-slide slide level1">
+<h1>Creating an Object III</h1>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>box <span class="ot">&lt;-</span> <span class="st">&quot;chocs&quot;</span></span></code></pre></div>
+<ul>
+<li>Next there are two individual symbols, which when combined become an
+assignment operator. It is essentially an arrow <code>&lt;-</code> made
+up of a less than sign <code>&lt;</code> and a dash <code>-</code></li>
+<li>This means anything on the right side of the arrow will be placed
+into the object (or our newly named box).</li>
+</ul>
+</section>
+
+<section id="creating-an-object-iv" class="title-slide slide level1">
+<h1>Creating an Object IV</h1>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>box <span class="ot">&lt;-</span> <span class="st">&quot;chocs&quot;</span></span></code></pre></div>
+<ul>
+<li><code>"chocs"</code> is what I’ve put in the box. A box of
+chocolates.</li>
+<li>It is text information (rather than numbers or data) and so it is in
+speech marks in our code.</li>
+<li>Run the code now and then check the environment panel (top
+right).</li>
+</ul>
+</section>
+
+<section id="creating-an-object-v" class="title-slide slide level1">
+<h1>Creating an Object V</h1>
+<ul>
+<li>If you look at the top right panel (called the environment), you
+should spot that an object has appeared called <code>box</code>. That’s
+your newly created object.</li>
+<li>The environment panel acts a bit like a warehouse or storage unit
+for our boxes (see, I told you the analogy would make sense…).</li>
+<li>When conducting data analysis, you may end up with quite a few
+objects stored in the environment.</li>
+</ul>
+</section>
+
+<section id="creating-more-objects" class="title-slide slide level1">
+<h1>Creating More Objects</h1>
+<ul>
+<li>Almost anything can be committed to an object in RStudio. For
+example, run and adapt the code below. Change “Luke” to your own name!
+Then check that your environment to see these additional objects.</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>my_name <span class="ot">&lt;-</span> <span class="st">&quot;Luke&quot;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>answer <span class="ot">&lt;-</span> <span class="dv">12345</span><span class="sc">*</span><span class="dv">54321</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>pi <span class="ot">&lt;-</span> <span class="fl">3.14</span></span></code></pre></div>
+</section>
+
+<section id="print" class="title-slide slide level1">
+<h1>print()</h1>
+<p>You can check what is in a box easily by running this code:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(box)</span></code></pre></div>
+<p>Change <code>box</code> to the name of the other objects:
+<code>my_name</code>, <code>answer</code>, <code>pi</code> and check the
+console each time you run the code.</p>
+</section>
+
+<section id="naming-objects-i" class="title-slide slide level1">
+<h1>Naming Objects I</h1>
+<ul>
+<li>Try to keep object names short.</li>
+<li>Often you will need to refer to them in your code, and typing out
+long names is time consuming.</li>
+<li>Always use lowercase letters and use an underscore <code>_</code> if
+you need a space (or just avoid spaces if you can).</li>
+<li>For example:</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="st">&quot;Luke&quot;</span></span></code></pre></div>
+<ul>
+<li><code>name</code> is shorter than <code>my_name</code></li>
+</ul>
+</section>
+
+<section id="naming-objects-ii" class="title-slide slide level1">
+<h1>Naming Objects II</h1>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ans <span class="ot">&lt;-</span> answer</span></code></pre></div>
+<ul>
+<li><code>ans</code> is shorter than <code>answer</code></li>
+<li>You might notice here you’ve put an existing box into a new box
+called <code>ans</code>.</li>
+</ul>
+</section>
+
+<section id="code-is-case-sensitive" class="title-slide slide level1">
+<h1>Code is Case Sensitive</h1>
+<p>Try running:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(Name)</span></code></pre></div>
+<ul>
+<li><p>This won’t wont work because R is not expecting an uppercase
+<code>N</code></p></li>
+<li><p>Use this instead:</p></li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(name)</span></code></pre></div>
+</section>
+
+<section id="functions-and-arguments" class="title-slide slide level1">
+<h1>Functions and Arguments</h1>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
