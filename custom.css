@@ -359,30 +359,24 @@ pre code {
   border: 1px solid var(--border) !important;
   border-left: 4px solid var(--primary) !important;
   border-radius: 8px !important;
-  padding: 14px 42px 14px 16px !important;
+
+  /* Internal spacing */
+  padding: 12px 42px 12px 16px !important;
+
+  /* Reduce space above/below code chunks */
+  margin-top: 0.1em !important;
+  margin-bottom: 0.1em !important;
+
   box-shadow: none !important;
 }
 
 .reveal pre code {
   background: transparent !important;
   color: var(--text) !important;
-  font-size: 0.8em;
-  line-height: 1.4;
-}
 
-
-/* Larger copy button on presentation slides */
-.reveal .copy-code-button {
-  width: 32px;
-  height: 32px;
-  top: 8px;
-  right: 8px;
-  border-radius: 6px;
-}
-
-.reveal .copy-code-button svg {
-  width: 17px;
-  height: 17px;
+  /* Slightly larger presentation code */
+  font-size: 0.99em !important;
+  line-height: 1.35;
 }
 /* Slightly smaller text for busy slides */
 .reveal section.compact {
@@ -415,4 +409,33 @@ pre code {
   border-radius: 4px;
   font-size: 0.9em;
   font-weight: 500;
+}
+/* ================================
+   Title slide logo
+   ================================ */
+
+.reveal #title-slide .title-logo {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 20px auto 15px auto;
+  border: none;
+  box-shadow: none;
+}
+/* ================================
+   Live demo marker
+   ================================ */
+
+.demo-marker {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+
+  width: 12px;
+  height: 12px;
+
+  background: var(--primary);
+  transform: rotate(45deg);
+
+  opacity: 0.7;
 }

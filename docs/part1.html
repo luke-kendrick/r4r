@@ -127,6 +127,7 @@
   </style>
 
     <link rel="stylesheet" href="custom.css"/>
+    <link rel="icon" type="image/png" href="images/mde_icon_2.png">
     <script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
     <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
     <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
@@ -137,6 +138,7 @@
 
 <section id="title-slide">
   <h1 class="title">R4R? Guided Tutorial</h1>
+  <h1 class="subtitle"><img src="images/mde_icon_2.png" class="title-logo"></h1>
   <h2 class="author">Dr. Luke Kendrick, Department of Psychology Royal
 Holloway University of London</h2>
 </section>
@@ -186,15 +188,15 @@ height="134" /></p>
 
 <section id="open-rstudio-i" class="title-slide slide level1">
 <h1>Open RStudio I</h1>
+<p><img data-src="images/clipboard-3796714733.png" width="195"
+height="74" /></p>
 <ul>
-<li>Look for this logo:</li>
-</ul>
-<p><img data-src="images/clipboard-3796714733.png" width="214"
-height="76" /></p>
-<ul>
-<li>You want to make sure you open RStudio and not “R” which also exists
-on the computer. That runs in the background.</li>
-<li>Make sure you see the word <strong>studio</strong>!</li>
+<li><p>Search for “RStudio” on the PC and identify the logo
+(above)</p></li>
+<li><p>You want to make sure you open RStudio and not “R” which also
+exists on the computer. R just runs in the background.</p></li>
+<li><p>A common error is to open the language and not opening the
+“Studio” program. Make sure you open RStudio.</p></li>
 </ul>
 </section>
 
@@ -237,7 +239,7 @@ by one.</p>
 
 <section id="script-panel" class="title-slide slide level1">
 <h1>Script Panel</h1>
-<p><img data-src="images/rstudio_layout_v1.png" width="420" /></p>
+<p><img data-src="images/rstudio3.jpg" width="620" /></p>
 <ul>
 <li>The R script is the top left and is an editable space where you can
 type, enter, and run your code. You can save and share your R script, a
@@ -247,19 +249,18 @@ bit like a Word document.</li>
 
 <section id="console-panel" class="title-slide slide level1">
 <h1>Console Panel</h1>
-<p><img data-src="images/rstudio_layout_v1.png" width="420" /></p>
+<p><img data-src="images/rstudio3.jpg" width="620" /></p>
 <ul>
 <li>The R console is the bottom left panel. Think of this an “results”
 panel. This is where you can read the results of your code (or an error
-message if your code did not work!). Technically you can type your code
-into this panel, I’d recommend that you never do this because it isn’t
-possible to save it.</li>
+message if your code did not work!).</li>
+<li>Avoid typing any code into this panel.</li>
 </ul>
 </section>
 
 <section id="environment-panel" class="title-slide slide level1">
 <h1>Environment Panel</h1>
-<p><img data-src="images/rstudio_layout_v1.png" width="420" /></p>
+<p><img data-src="images/rstudio3.jpg" width="620" /></p>
 <ul>
 <li>The environment panel is the top right panel. It can be helpful to
 think of this as a bit like a memory space where RStudio will keep hold
@@ -268,9 +269,10 @@ about saving things to the environment later in this chapter.</li>
 </ul>
 </section>
 
-<section id="miscellaneous-panel" class="title-slide slide level1">
-<h1>Miscellaneous Panel</h1>
-<p><img data-src="images/rstudio_layout_v1.png" width="420" /></p>
+<section id="miscellaneousoutput-panel"
+class="title-slide slide level1">
+<h1>Miscellaneous/Output Panel</h1>
+<p><img data-src="images/rstudio3.jpg" width="620" /></p>
 <ul>
 <li>The bottom right panel is what I call the miscellaneous panel. It
 has a few different purposes that include viewing files, plots,
@@ -312,20 +314,25 @@ work—proof read it carefully and take your time.</li>
 
 <section id="r-code-basics-i" class="title-slide slide level1">
 <h1>R Code Basics I</h1>
+<div class="demo-marker">
+
+</div>
 <ul>
 <li>In RStudio find the script panel (top left).</li>
 <li>Enter the following code:</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span>()</span></code></pre></div>
 <ul>
-<li>When ready use your keyboard to press
-<strong><code>CTRL</code></strong> +
-<strong><code>ENTER</code></strong>.</li>
+<li><p>When ready use your keyboard</p>
+<ul>
+<li><strong><code>CTRL</code></strong> +
+<strong><code>ENTER</code></strong> (windows)</li>
 <li><strong><code>CMND</code></strong> +
-<strong><code>ENTER</code></strong> on a mac.</li>
+<strong><code>ENTER</code></strong> (mac)</li>
+</ul></li>
+<li><p>Check the console panel (bottom left) and you should see today’s
+date as the result!</p></li>
 </ul>
-<p>Once done, check the console panel (bottom left) and you should see
-today’s date as the result!</p>
 </section>
 
 <section id="r-code-basics-ii" class="title-slide slide level1">
@@ -489,8 +496,210 @@ called <code>ans</code>.</li>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(name)</span></code></pre></div>
 </section>
 
-<section id="functions-and-arguments" class="title-slide slide level1">
-<h1>Functions and Arguments</h1>
+<section id="functions-and-arguments-i"
+class="title-slide slide level1">
+<h1>Functions and Arguments I</h1>
+<p><img data-src="images/function.png" width="412" /></p>
+<ul>
+<li><p>Coding in R is mostly built around using a series of functions
+and arguments—both work together to carry out your
+instruction(s).</p></li>
+<li><p>You have actually already used functions and arguments on the
+previous slides.</p></li>
+</ul>
+</section>
+
+<section id="functions-and-arguments-ii"
+class="title-slide slide level1">
+<h1>Functions and Arguments II</h1>
+<ul>
+<li><code>print()</code> is a function which prints something to the
+console.</li>
+<li>The empty parentheses is where you pass an argument.</li>
+<li>A argument is information to help a function.</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(name)</span></code></pre></div>
+<ul>
+<li>The argument here is <code>name</code> or the object we want
+printed.</li>
+</ul>
+</section>
+
+<section id="functions-and-arguments-iii"
+class="title-slide slide level1">
+<h1>Functions and Arguments III</h1>
+<ul>
+<li>Let’s try a different function and argument.</li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fl">3.14159265359</span>)</span></code></pre></div>
+<ul>
+<li>This is a function which will round a number to the nearest whole
+number.</li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(pi)</span></code></pre></div>
+<ul>
+<li>You can also just use <code>pi</code>.</li>
+</ul>
+</section>
+
+<section id="functions-and-arguments-iv"
+class="title-slide slide level1">
+<h1>Functions and Arguments IV</h1>
+<ul>
+<li><p>Some functions require multiple arguments.</p></li>
+<li><p>If we want to round <code>pi</code> to <strong>two</strong>
+decimal places, we need another argument.</p></li>
+</ul>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(pi, <span class="at">digits =</span> <span class="dv">2</span>)</span></code></pre></div>
+<ul>
+<li>If you run the code above, you’ll now get a slightly different
+answer because the additional argument <code>digits = 2</code> has
+changed how the function behaves. Rather than rounding to a whole
+number, it will now round it to two decimal places.</li>
+</ul>
+</section>
+
+<section id="functions-and-arguments-v"
+class="title-slide slide level1">
+<h1>Functions and Arguments V</h1>
+<ul>
+<li>Functions tend to require quite specific arguments.</li>
+<li>One useful tip is to use <code>?</code> to learn about any
+function.</li>
+<li>Run the code below and check the bottom right panel for more
+information about the <code>round()</code> function.</li>
+</ul>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>?<span class="fu">round</span>()</span></code></pre></div>
+</section>
+
+<section id="comments-i" class="title-slide slide level1">
+<h1>Comments I</h1>
+<ul>
+<li>You might be thinking “wow, <strong>objects, environment, functions,
+arguments</strong>, how will I remember what the code does?</li>
+<li>Don’t panic because R allows you to add your own notes (or
+comments)!</li>
+<li>We use the hash symbol to tell R where our comments are.</li>
+<li>R will ignore everything after a hash.</li>
+<li>Look at the examples on the next slide and then amend your own code
+to add your own notes.</li>
+</ul>
+</section>
+
+<section id="comments-ii" class="title-slide slide level1">
+<h1>Comments II</h1>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span>() <span class="co">#will return today&#39;s date</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(pi, <span class="at">digits =</span> <span class="dv">4</span>) <span class="co">#will round pi to four decimal places.</span></span></code></pre></div>
+<ul>
+<li><strong>Top Tip</strong>: Always use comments so that when you come
+back to your code, you can understand it.</li>
+</ul>
+<p><img data-src="images/cat.jpg" width="317" /></p>
+</section>
+
+<section id="packages" class="title-slide slide level1">
+<h1>Packages</h1>
+<ul>
+<li>When you first open RStudio you will have access to “base R”
+functions.
+<ul>
+<li>Think of this as the basic subscription.</li>
+</ul></li>
+<li>However, throughout your data analysis journey you’ll need to make
+use of more specialist functions beyond base R that belong to packages.
+<ul>
+<li>Think of these packages as an “app” or an extra “add-on”.</li>
+</ul></li>
+<li>One essential package is the <code>tidyverse</code> package.</li>
+</ul>
+</section>
+
+<section id="install-packages" class="title-slide slide level1">
+<h1>Install Packages</h1>
+<ul>
+<li>To install a package use this code:</li>
+</ul>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>) <span class="co"># install tidyverse package</span></span></code></pre></div>
+<ul>
+<li><strong>You do not need to do this on the campus PCs as Tidyverse is
+already installed.</strong></li>
+<li>Just like a phone app, you only need to install a package once on
+your device.</li>
+</ul>
+</section>
+
+<section id="load-packages" class="title-slide slide level1">
+<h1>Load Packages</h1>
+<ul>
+<li>Installing a package is the first step. Next you need to load
+it.</li>
+<li>To load a package you’ll use the <code>library()</code>
+function.</li>
+<li>You’ll need to run this each time you start a new session in R.</li>
+</ul>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<ul>
+<li>If you take a look at the console you will see the package
+load.</li>
+</ul>
+</section>
+
+<section id="check-packages" class="title-slide slide level1">
+<h1>Check Packages</h1>
+<ul>
+<li>On the miscellaneous panel (bottom right) you’ll notice a
+<code>Packages</code> tab.</li>
+<li>Click on this to see which packages are already installed on your
+device.</li>
+<li>If there is a ticked next to the package name, this means it has
+been loaded and ready to use.</li>
+</ul>
+</section>
+
+<section id="tidyverse" class="title-slide slide level1">
+<h1>Tidyverse</h1>
+<p><img data-src="images/tidyverse.webp" width="113" /></p>
+<ul>
+<li>Tidyverse is a package (or a collection of packages) which you’ll
+use every week.</li>
+<li>It contains several essential functions to support with data
+analysis in Psychology.</li>
+</ul>
+</section>
+
+<section id="importing-data" class="title-slide slide level1">
+<h1>Importing Data</h1>
+
+</section>
+
+<section id="working-directory" class="title-slide slide level1">
+<h1>Working Directory</h1>
+
+</section>
+
+<section id="files-and-folder-structure"
+class="title-slide slide level1">
+<h1>Files and Folder Structure</h1>
+
+</section>
+
+<section id="readimport-data" class="title-slide slide level1">
+<h1>Read/Import Data</h1>
+
+</section>
+
+<section id="view-data" class="title-slide slide level1">
+<h1>View Data</h1>
+
+</section>
+
+<section id="summarise-data" class="title-slide slide level1">
+<h1>Summarise Data</h1>
+
+</section>
+
+<section id="whats-next" class="title-slide slide level1">
+<h1>What’s Next</h1>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 

@@ -1,6 +1,7 @@
 ---
 title: "R4R? Guided Tutorial"
 author: "Dr. Luke Kendrick, Department of Psychology Royal Holloway University of London"
+subtitle: '<img src="images/mde_icon_2.png" class="title-logo">'
 output:
   revealjs::revealjs_presentation:
     theme: white
@@ -8,6 +9,7 @@ output:
     self_contained: false
     reveal_plugins: ["menu"]
     includes:
+      in_header: favicon.html
       after_body: home.html
 css: custom.css
 ---
@@ -50,12 +52,13 @@ Workshop Aims:
 
 # Open RStudio I
 
--   Look for this logo:
+![](images/clipboard-3796714733.png){width="195" height="74"}
 
-![](images/clipboard-3796714733.png){width="214" height="76"}
+-   Search for "RStudio" on the PC and identify the logo (above)
 
--   You want to make sure you open RStudio and not "R" which also exists on the computer. That runs in the background.
--   Make sure you see the word **studio**!
+-   You want to make sure you open RStudio and not "R" which also exists on the computer. R just runs in the background.
+
+-   A common error is to open the language and not opening the "Studio" program. Make sure you open RStudio.
 
 # Open RStudio II
 
@@ -89,25 +92,26 @@ You need to learn what each panel does. We will go through them one by one.
 
 # Script Panel
 
-![](images/rstudio_layout_v1.png){width="420"}
+![](images/rstudio3.jpg){width="620"}
 
 -   The R script is the top left and is an editable space where you can type, enter, and run your code. You can save and share your R script, a bit like a Word document.
 
 # Console Panel
 
-![](images/rstudio_layout_v1.png){width="420"}
+![](images/rstudio3.jpg){width="620"}
 
--   The R console is the bottom left panel. Think of this an “results” panel. This is where you can read the results of your code (or an error message if your code did not work!). Technically you can type your code into this panel, I’d recommend that you never do this because it isn’t possible to save it.
+-   The R console is the bottom left panel. Think of this an “results” panel. This is where you can read the results of your code (or an error message if your code did not work!).
+-   Avoid typing any code into this panel.
 
 # Environment Panel
 
-![](images/rstudio_layout_v1.png){width="420"}
+![](images/rstudio3.jpg){width="620"}
 
 -   The environment panel is the top right panel. It can be helpful to think of this as a bit like a memory space where RStudio will keep hold of any objects/data/information that you ask it to. You’ll learn more about saving things to the environment later in this chapter.
 
-# Miscellaneous Panel
+# Miscellaneous/Output Panel
 
-![](images/rstudio_layout_v1.png){width="420"}
+![](images/rstudio3.jpg){width="620"}
 
 -   The bottom right panel is what I call the miscellaneous panel. It has a few different purposes that include viewing files, plots, packages, or finding help.
 -   Also known as Files/Plots/Packages/Help/Viewer panel.
@@ -132,6 +136,9 @@ You need to learn what each panel does. We will go through them one by one.
 
 # R Code Basics I
 
+::: demo-marker
+:::
+
 -   In RStudio find the script panel (top left).
 -   Enter the following code:
 
@@ -139,10 +146,12 @@ You need to learn what each panel does. We will go through them one by one.
 date()
 ```
 
--   When ready use your keyboard to press **`CTRL`** + **`ENTER`**.
--   **`CMND`** + **`ENTER`** on a mac.
+-   When ready use your keyboard
 
-Once done, check the console panel (bottom left) and you should see today's date as the result!
+    -   **`CTRL`** + **`ENTER`** (windows)
+    -   **`CMND`** + **`ENTER`** (mac)
+
+-   Check the console panel (bottom left) and you should see today's date as the result!
 
 # R Code Basics II
 
@@ -215,9 +224,9 @@ box <- "chocs"
 
 # Creating More Objects
 
-- Almost anything can be committed to an object in RStudio. For example, run and adapt the code below. Change “Luke” to your own name! Then check that your environment to see these additional objects.
+-   Almost anything can be committed to an object in RStudio. For example, run and adapt the code below. Change “Luke” to your own name! Then check that your environment to see these additional objects.
 
-```r
+``` r
 my_name <- "Luke"
 answer <- 12345*54321
 pi <- 3.14
@@ -227,7 +236,7 @@ pi <- 3.14
 
 You can check what is in a box easily by running this code:
 
-```r
+``` r
 print(box)
 ```
 
@@ -235,42 +244,176 @@ Change `box` to the name of the other objects: `my_name`, `answer`, `pi` and che
 
 # Naming Objects I
 
-- Try to keep object names short.
-- Often you will need to refer to them in your code, and typing out long names is time consuming.
-- Always use lowercase letters and use an underscore `_` if you need a space (or just avoid spaces if you can).
-- For example:
-```r
+-   Try to keep object names short.
+-   Often you will need to refer to them in your code, and typing out long names is time consuming.
+-   Always use lowercase letters and use an underscore `_` if you need a space (or just avoid spaces if you can).
+-   For example:
+
+``` r
 name <- "Luke"
 ```
 
-- `name` is shorter than `my_name`
+-   `name` is shorter than `my_name`
 
 # Naming Objects II
 
-```r
+``` r
 ans <- answer
 ```
 
-- `ans` is shorter than `answer`
-- You might notice here you've put an existing box into a new box called `ans`.
+-   `ans` is shorter than `answer`
+-   You might notice here you've put an existing box into a new box called `ans`.
 
 # Code is Case Sensitive
 
 Try running:
 
-```r
+``` r
 print(Name)
 ```
 
-- This won't wont work because R is not expecting an uppercase `N`
+-   This won't wont work because R is not expecting an uppercase `N`
 
-- Use this instead:
+-   Use this instead:
 
-```r
+``` r
 print(name)
 ```
 
-# Functions and Arguments
+# Functions and Arguments I
+
+![](images/function.png){width="412"}
+
+-   Coding in R is mostly built around using a series of functions and arguments—both work together to carry out your instruction(s).
+
+-   You have actually already used functions and arguments on the previous slides.
+
+# Functions and Arguments II
+
+-   `print()` is a function which prints something to the console.
+-   The empty parentheses is where you pass an argument.
+-   A argument is information to help a function.
+
+``` r
+print(name)
+```
+
+-   The argument here is `name` or the object we want printed.
+
+# Functions and Arguments III
+
+-   Let's try a different function and argument.
+
+``` r
+round(3.14159265359)
+```
+
+-   This is a function which will round a number to the nearest whole number.
+
+``` r
+round(pi)
+```
+
+-   You can also just use `pi`.
+
+# Functions and Arguments IV
+
+-   Some functions require multiple arguments.
+
+-   If we want to round `pi` to **two** decimal places, we need another argument.
+
+``` r
+round(pi, digits = 2)
+```
+
+-   If you run the code above, you’ll now get a slightly different answer because the additional argument `digits = 2` has changed how the function behaves. Rather than rounding to a whole number, it will now round it to two decimal places.
+
+# Functions and Arguments V
+
+-   Functions tend to require quite specific arguments.
+-   One useful tip is to use `?` to learn about any function.
+-   Run the code below and check the bottom right panel for more information about the `round()` function.
+
+``` r
+?round()
+```
+
+# Comments I
+
+-   You might be thinking "wow, **objects, environment, functions, arguments**, how will I remember what the code does?
+-   Don't panic because R allows you to add your own notes (or comments)!
+-   We use the hash symbol to tell R where our comments are.
+-   R will ignore everything after a hash.
+-   Look at the examples on the next slide and then amend your own code to add your own notes.
+
+# Comments II
+
+``` r
+date() #will return today's date
+round(pi, digits = 4) #will round pi to four decimal places.
+```
+
+-   **Top Tip**: Always use comments so that when you come back to your code, you can understand it.
+
+![](images/cat.jpg){width="317"}
+
+# Packages
+
+-   When you first open RStudio you will have access to "base R" functions.
+    -   Think of this as the basic subscription.
+-   However, throughout your data analysis journey you'll need to make use of more specialist functions beyond base R that belong to packages.
+    -   Think of these packages as an "app" or an extra "add-on".
+-   One essential package is the `tidyverse` package.
+
+# Install Packages
+
+-   To install a package use this code:
+
+``` r
+install.packages("tidyverse") # install tidyverse package
+```
+
+-   **You do not need to do this on the campus PCs as Tidyverse is already installed.**
+-   Just like a phone app, you only need to install a package once on your device.
+
+# Load Packages
+
+-   Installing a package is the first step. Next you need to load it.
+-   To load a package you'll use the `library()` function.
+-   You'll need to run this each time you start a new session in R.
+
+``` r
+library(tidyverse)
+```
+
+-   If you take a look at the console you will see the package load.
+
+# Check Packages
+
+-   On the miscellaneous panel (bottom right) you'll notice a `Packages` tab.
+-   Click on this to see which packages are already installed on your device.
+-   If there is a ticked next to the package name, this means it has been loaded and ready to use.
+
+# Tidyverse
+
+![](images/tidyverse.webp){width="113"}
+
+-   Tidyverse is a package (or a collection of packages) which you'll use every week.
+-   It contains several essential functions to support with data analysis in Psychology.
+
+# Importing Data
+
+# Working Directory
+
+# Files and Folder Structure
+
+# Read/Import Data
+
+# View Data
+
+# Summarise Data
+
+# What's Next
 
 
 
