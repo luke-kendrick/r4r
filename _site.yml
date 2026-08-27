@@ -1,6 +1,10 @@
 output_dir: "docs"
 
 name: "Welcome Week Workshop"
+
+include:
+  - "files/*"
+
 navbar:
   title: "Ready4R?"
   left:

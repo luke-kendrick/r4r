@@ -415,7 +415,11 @@ library(tidyverse)
 
 # What's Next
 
+Thanks for taking part.
 
+<a href="files/R4R-slides.pdf" class="pdf-download" download>
+  ↓ Download slides as PDF
+</a>
 
 ```{=html}
 <script>
