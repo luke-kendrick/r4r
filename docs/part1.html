@@ -669,23 +669,106 @@ analysis in Psychology.</li>
 
 <section id="importing-data" class="title-slide slide level1">
 <h1>Importing Data</h1>
-
-</section>
-
-<section id="working-directory" class="title-slide slide level1">
-<h1>Working Directory</h1>
-
+<ul>
+<li><p>You will need to understand how to import and inspect different
+data files in RStudio.</p></li>
+<li><p>During PS2010 you’ll be using <code>.csv</code> files, which are
+basically excel spreadsheets.</p>
+<ul>
+<li><code>.csv</code> stands for comma separated values and RStudio
+likes these files.</li>
+</ul></li>
+<li><p>There are a few different ways to get other types of files, learn
+more <a
+href="https://support.posit.co/hc/en-us/articles/218611977-Importing-Data-with-the-RStudio-IDE">here</a>.</p></li>
+<li><p>During PS2010 you’ll be expected to follow the steps on the next
+slides…</p></li>
+<li><p>But first…we need a data file.</p></li>
+</ul>
 </section>
 
 <section id="files-and-folder-structure"
 class="title-slide slide level1">
 <h1>Files and Folder Structure</h1>
-
+<ul>
+<li><p>Many previous PS2010 students have had difficulty with computer
+folder structures.</p></li>
+<li><p>Download the data file called <code>height.csv</code> from Moodle
+<a
+href="https://moodle.royalholloway.ac.uk/course/view.php?id=33715&amp;sectionid=504092#sectionid-533390">here</a>.</p></li>
+<li><p>Decide where to save it on your computer:</p>
+<ul>
+<li><p>You might already have an existing file, e.g.,
+Documents.</p></li>
+<li><p>I’d recommend you create a new folder somewhere called “Ready4R”
+and save it there.</p></li>
+</ul></li>
+</ul>
 </section>
 
-<section id="readimport-data" class="title-slide slide level1">
-<h1>Read/Import Data</h1>
+<section id="working-directory" class="title-slide slide level1">
+<h1>Working Directory</h1>
+<ul>
+<li><p>The working directory is a folder on your computer which RStudio
+will use to find any data files.</p></li>
+<li><p>You’ll need to “set” your working directory each time you use
+RStudio in order to tell it where to find your data file(s).</p></li>
+</ul>
+</section>
 
+<section id="set-working-directory-i" class="title-slide slide level1">
+<h1>Set Working Directory I</h1>
+<ul>
+<li><p>Set the working directory now (<code>Session</code> &gt;
+<code>Set Working Directory</code> &gt;
+<code>Choose Directory</code>:</p>
+<p><img data-src="images/setwd.jpg" width="600" /></p></li>
+</ul>
+</section>
+
+<section id="set-working-directory-ii" class="title-slide slide level1">
+<h1>Set Working Directory II</h1>
+<ul>
+<li><p>You need to select the <strong>Folder</strong> you saved the
+<code>height.csv</code> file in.</p>
+<p><img data-src="images/setwd2.jpg" width="600" /></p></li>
+</ul>
+</section>
+
+<section id="check-working-directory" class="title-slide slide level1">
+<h1>Check Working Directory</h1>
+<ul>
+<li>Run the code below to ask RStudio where the current working
+directory is.</li>
+<li>You should check that this is correct and that it is the place your
+<code>height.csv</code> file is.</li>
+</ul>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+</section>
+
+<section id="import-data" class="title-slide slide level1">
+<h1>Import Data</h1>
+<ul>
+<li>Now you will use your first tidyverse function:
+<code>read_csv()</code></li>
+</ul>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;height.csv&quot;</span>)</span></code></pre></div>
+</section>
+
+<section id="read_csv-explained" class="title-slide slide level1">
+<h1>read_csv() Explained</h1>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;height.csv&quot;</span>)</span></code></pre></div>
+<ul>
+<li><code>dat</code> is an object. Dat is a short name for “data”. You
+could call it something else.</li>
+<li><code>&lt;-</code> is the assignment operator. Anything on the right
+side will be assigned to the object on the left.</li>
+<li><code>read_csv()</code> is a function which will read/look inside a
+<code>.csv</code> file</li>
+<li><code>"height.csv"</code> is the argument which directs the function
+to a specific file name. Note it is in speech marks because it is a file
+name.</li>
+</ul>
 </section>
 
 <section id="view-data" class="title-slide slide level1">

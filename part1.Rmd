@@ -403,13 +403,86 @@ library(tidyverse)
 
 # Importing Data
 
-# Working Directory
+-   You will need to understand how to import and inspect different data files in RStudio.
+
+-   During PS2010 you'll be using `.csv` files, which are basically excel spreadsheets.
+
+    -   `.csv` stands for comma separated values and RStudio likes these files.
+
+-   There are a few different ways to get other types of files, learn more [here](https://support.posit.co/hc/en-us/articles/218611977-Importing-Data-with-the-RStudio-IDE).
+
+-   During PS2010 you'll be expected to follow the steps on the next slides...
+
+-   But first...we need a data file.
 
 # Files and Folder Structure
 
-# Read/Import Data
+-   Many previous PS2010 students have had difficulty with computer folder structures.
+
+-   Download the data file called `height.csv` from Moodle [here](https://moodle.royalholloway.ac.uk/course/view.php?id=33715&sectionid=504092#sectionid-533390).
+
+-   Decide where to save it on your computer:
+
+    -   You might already have an existing file, e.g., Documents.
+
+    -   I'd recommend you create a new folder somewhere called "Ready4R" and save it there.
+
+# Working Directory
+
+-   The working directory is a folder on your computer which RStudio will use to find any data files.
+
+-   You'll need to "set" your working directory each time you use RStudio in order to tell it where to find your data file(s).
+
+# Set Working Directory I
+
+-   Set the working directory now (`Session` \> `Set Working Directory` \> `Choose Directory`:
+
+    ![](images/setwd.jpg){width="600"}
+
+# Set Working Directory II
+
+-   You need to select the **Folder** you saved the `height.csv` file in.
+
+    ![](images/setwd2.jpg){width="600"}
+
+# Check Working Directory
+
+- Run the code below to ask RStudio where the current working directory is.
+- You should check that this is correct and that it is the place your `height.csv` file is.
+
+```r
+getwd()
+```
+
+# Import Data
+
+- Now you will use your first tidyverse function: `read_csv()`
+
+```r
+dat <- read_csv("height.csv")
+```
+
+# read_csv() Explained
+
+```r
+dat <- read_csv("height.csv")
+```
+
+- `dat` is an object. Dat is a short name for "data". You could call it something else.
+- `<-` is the assignment operator. Anything on the right side of the arrow will be assigned to the object on the left.
+- `read_csv()` is a function which will read/look inside a `.csv` file
+- `"height.csv"` is the argument which directs the function to a specific file name. Note it is in speech marks because it is a file name.
+
+# Check the Environment
+
+- You should now be able to check the **environment** panel.
+- Remember from earlier that this panel is a bit like our warehouse where our boxes (or objects) are stored.
+- You should see your newly created object called `dat`.
+- If not, something has gone terribly wrong so put your hand up for some in-class help.
 
 # View Data
+
+- You can 
 
 # Summarise Data
 
@@ -417,9 +490,7 @@ library(tidyverse)
 
 Thanks for taking part.
 
-<a href="files/R4R-slides.pdf" class="pdf-download" download>
-  ↓ Download slides as PDF
-</a>
+<a href="files/R4R-slides.pdf" class="pdf-download" download> ↓ Download slides as PDF </a>
 
 ```{=html}
 <script>
