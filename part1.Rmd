@@ -13,16 +13,15 @@ output:
       after_body: home.html
 css: custom.css
 ---
-
-# Introduction
+## Introduction
 
 Workshop Aims:
 
 -   Provide an introduction to R and RStudio in preparation for PS2010 Psychological Research Methods.
 
--   Understand the layout and key features of RStudio
+-   Understand the layout and key features of RStudio.
 
--   Understand the basics of using R code
+-   Understand the basics of using R code.
 
 -   To begin working with data in RStudio and understand key terminology.
 
@@ -42,7 +41,7 @@ Workshop Aims:
 
 -   Rrrrr is not only the noise a pirate makes...
 
--   R is also programming language. You'll also use RStudio.
+-   R is also a programming language. You'll also use RStudio.
 
 -   R and RStudio are not the same thing:
 
@@ -54,7 +53,7 @@ Workshop Aims:
 
 ![](images/clipboard-3796714733.png){width="195" height="74"}
 
--   Search for "RStudio" on the PC and identify the logo (above)
+-   Search for "RStudio" on the PC and identify the logo (above).
 
 -   You want to make sure you open RStudio and not "R" which also exists on the computer. R just runs in the background.
 
@@ -100,8 +99,8 @@ You need to learn what each panel does. We will go through them one by one.
 
 ![](images/rstudio3.jpg){width="620"}
 
--   The R console is the bottom left panel. Think of this an “results” panel. This is where you can read the results of your code (or an error message if your code did not work!).
--   Avoid typing any code into this panel.
+-   The R console is the bottom left panel. Think of this as a “results” panel. This is where you can read the results of your code (or an error message if your code did not work!).
+-   Avoid typing any code into this panel. Code entered directly into the console is not saved in your script.
 
 # Environment Panel
 
@@ -120,15 +119,22 @@ You need to learn what each panel does. We will go through them one by one.
 
 -   As you progress through this workshop and PS2010, you'll learn more about what these panels can do.
 
--   A key take home message is that you need **four** of them and that you enter your code in the script (top left) panel.
+-   A key take home message is that you need **four** of them and that you enter and save your code in the script (top left) panel.
 
 # Using R Code I
 
 -   Coding sounds scary. However, just think of it as a series of instructions.
+``` r
+'stand up', and then,
+'walk towards the window' and then,
+'return to your seat'
+```
 -   Like with any language there are rules and a structure.
 -   It can be a bit quirky to begin with, even the smallest mistakes can change the meaning.
 
 # Using R Code II
+
+-   **R won't guess what you mean. It needs instructions to be written exactly.** 
 
 -   A typo or incorrectly placed symbol could mean your code does not work—proof read it carefully and take your time.
 
@@ -187,7 +193,10 @@ date()
 
 # Creating an Object I
 
--   In RStudio we can assign a value or data to an object. However, you will need to create and name your box. Let’s work through an example.
+-   In RStudio we can assign a value or data to an object. However, you will need to create and name your box.
+-   We give our box a name so that we can find and retrieve it again later. 
+-   Let's work through an example.
+
 
 # Creating an Object II
 
@@ -224,7 +233,7 @@ box <- "chocs"
 
 # Creating More Objects
 
--   Almost anything can be committed to an object in RStudio. For example, run and adapt the code below. Change “Luke” to your own name! Then check that your environment to see these additional objects.
+-   Almost anything can be committed to an object in RStudio. For example, run and adapt the code below. Change “Luke” to your own name! Then check your environment to see these additional objects.
 
 ``` r
 my_name <- "Luke"
@@ -232,15 +241,25 @@ answer <- 12345*54321
 pi <- 3.14
 ```
 
+# Why Do We Need Objects?
+![](images/boxes.jpg){width="620"}
+
+-   Objects allow us to handle our data efficiently, without them, we would have to write everything from scratch every time.  
+
+-   Objects save you time and effort by letting you:  
+    -   Store data and information in one place.  
+    -   Reuse your work.  
+    -   Keep your code clean and organised.  
+
 # print()
 
-You can check what is in a box easily by running this code:
+-   You can check what is in a box easily by running this code:
 
 ``` r
 print(box)
 ```
 
-Change `box` to the name of the other objects: `my_name`, `answer`, `pi` and check the console each time you run the code.
+-   Change `box` to the name of the other objects: `my_name`, `answer`, `pi` and check the console each time you run the code.
 
 # Naming Objects I
 
@@ -280,6 +299,15 @@ print(Name)
 print(name)
 ```
 
+# When R Doesn't Understand
+-   **Errors will happen!**
+-   **R is very literal, and error messages often give you clues.**
+
+-   Try this:
+    -   What was I trying to do?
+    -   What is R telling me?
+    -   Check what R mentions in the error message.
+
 # Functions and Arguments I
 
 ![](images/function.png){width="412"}
@@ -292,7 +320,7 @@ print(name)
 
 -   `print()` is a function which prints something to the console.
 -   The empty parentheses is where you pass an argument.
--   A argument is information to help a function.
+-   An argument is information to help a function.
 
 ``` r
 print(name)
@@ -330,6 +358,7 @@ round(pi, digits = 2)
 
 # Functions and Arguments V
 
+-   A function is something that contains a set of instructions that takes input, does something with it, and gives you an output.
 -   Functions tend to require quite specific arguments.
 -   One useful tip is to use `?` to learn about any function.
 -   Run the code below and check the bottom right panel for more information about the `round()` function.
@@ -340,7 +369,7 @@ round(pi, digits = 2)
 
 # Comments I
 
--   You might be thinking "wow, **objects, environment, functions, arguments**, how will I remember what the code does?
+-   You might be thinking "wow, **objects, environment, functions, arguments**, how will I remember what the code does?"
 -   Don't panic because R allows you to add your own notes (or comments)!
 -   We use the hash symbol to tell R where our comments are.
 -   R will ignore everything after a hash.
@@ -392,7 +421,7 @@ library(tidyverse)
 
 -   On the miscellaneous panel (bottom right) you'll notice a `Packages` tab.
 -   Click on this to see which packages are already installed on your device.
--   If there is a ticked next to the package name, this means it has been loaded and ready to use.
+-   If there is a tick next to the package name, this means it has been loaded and ready to use.
 
 # Tidyverse
 
@@ -415,7 +444,7 @@ library(tidyverse)
 
 -   But first...we need a data file.
 
-# Files and Folder Structure
+# Files and Folder Structure I
 
 -   Many previous PS2010 students have had difficulty with computer folder structures.
 
@@ -426,12 +455,22 @@ library(tidyverse)
     -   You might already have an existing file, e.g., Documents.
 
     -   I'd recommend you create a new folder somewhere called "Ready4R" and save it there.
+    
+# Files and Folder Structure II
+![](images/folder_structure.png){width="600"}
+
+-   Saving your data in a folder that makes sense, such as "Ready4R", will help you find your files next time.  
+-   This will be especially important when you need to analyse your own data.  
+-   For example: `Year_2 > PS2010 (subfolder) > Ready4R (subfolder)`.
 
 # Working Directory
+![](images/folder_structure_WD.png){width="600"}
 
 -   The working directory is a folder on your computer which RStudio will use to find any data files.
 
 -   You'll need to "set" your working directory each time you use RStudio in order to tell it where to find your data file(s).
+
+    -   In this example, `Ready4R` would be your working directory, as it's where we saved our data `heights.csv`.
 
 # Set Working Directory I
 
@@ -441,7 +480,7 @@ library(tidyverse)
 
 # Set Working Directory II
 
--   You need to select the **Folder** you saved the `height.csv` file in.
+-   You need to select the **Folder** you saved the `height.csv` file in (e.g., "Ready4R").
 
     ![](images/setwd2.jpg){width="600"}
 
@@ -491,56 +530,3 @@ dat <- read_csv("height.csv")
 Thanks for taking part.
 
 <a href="files/R4R-slides.pdf" class="pdf-download" download> ↓ Download slides as PDF </a>
-
-```{=html}
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const copyIcon = `
-    <svg width="13" height="13" viewBox="0 0 24 24"
-         fill="none" stroke="currentColor" stroke-width="2"
-         stroke-linecap="round" stroke-linejoin="round">
-      <rect x="9" y="9" width="13" height="13" rx="2"></rect>
-      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-    </svg>`;
-
-  const checkIcon = `
-    <svg width="13" height="13" viewBox="0 0 24 24"
-         fill="none" stroke="currentColor" stroke-width="2"
-         stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="20 6 9 17 4 12"></polyline>
-    </svg>`;
-
-  document.querySelectorAll("pre code").forEach(function (codeBlock) {
-
-    const pre = codeBlock.parentElement;
-
-    const button = document.createElement("button");
-    button.className = "copy-code-button";
-    button.type = "button";
-    button.innerHTML = copyIcon;
-    button.title = "Copy code";
-    button.setAttribute("aria-label", "Copy code");
-
-    button.addEventListener("click", async function () {
-
-      await navigator.clipboard.writeText(codeBlock.innerText);
-
-      button.innerHTML = checkIcon;
-      button.title = "Copied";
-
-      setTimeout(function () {
-        button.innerHTML = copyIcon;
-        button.title = "Copy code";
-      }, 1500);
-
-    });
-
-    pre.style.position = "relative";
-    pre.appendChild(button);
-
-  });
-
-});
-</script>
-```

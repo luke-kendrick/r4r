@@ -18,6 +18,9 @@ output:
 
 -   Check basic summary statistics.
 
+**Guess Who**  
+**Your task:** You have been given a data set containing information about a group of people. You will use RStudio to inspect, modify, and filter the data set before investigating a series of clues and identify mystery people within the data.
+
 ## Exercise 1: Import the Data
 
 **Import the Data File `guess_who.csv`**
@@ -39,7 +42,9 @@ If you see an error saying cannot find function `read_csv()` this usually means 
 
 ## Exercise 2: Inspect and Check Your Data
 
-**Take a look at your newly imported data file**
+You've just imported your data file. Before we start playing Guess Who, let's investigate what information we have about our group of people.  
+
+**Take a look at your newly imported data file.**
 
 Check the top right panel (the environment) and also use the code below to inspect your data set.
 
@@ -48,13 +53,19 @@ view(dataset) # this will open the data in a new tab.
 names(dataset) # this will show the variable names.
 ```
 
-It is really important to look at the variable names as you'll be using them in code later on.
+It is really important to look at the variable names as you'll be using them in code later on.  
 
-Answer Question 2.1 - 2.2 on your worksheet.
+Answer the following questions. The drop down will turn **green if correct** and **red if incorrect.**  
+
+**Question 2.1: How many variables does this data set have?**  
+-choose an answer-
+
+**Question 2.2: Which variable would you use to find out where someone is from?**  
+-choose an answer-
 
 ## Exercise 3: Change a Variable Name
 
-**One of the variable names is quite long. This can be annoying if we have to keep typing it out**
+**One of the variable names is quite long. This can be annoying if we have to keep typing it out.**
 
 Change the variable name `do_you_own_a_pet` to `pet`. The `rename()` function will let you rename a variable.
 
@@ -96,7 +107,7 @@ From now on, we will use the object called `mydata` and not the original data se
 
 ## Exercise 5: Filter Cases
 
-**We can select particular cases in our data set**
+**We can select particular cases in our data set.**
 
 For example, I could ask: how many people were from the city of Birmingham using the code below:
 
@@ -120,11 +131,23 @@ This code will:
 
 -   count() the number of data points.
 
-Adapt the code above to answer question 5.1 on the worksheet.
+**Time to investigate!**  
+We now know what information we have about our group. Let's use RStudio to find our more...
+
+Answer the following questions. The drop down will turn **green if correct** and **red if incorrect.**  
+
+**Question 5.1: I'm trying to find someone who studies Law. How many people in the data set study Law? Adapt the code above to find the answer.**  
+-choose an answer-
+
+**Question 5.2: I've changed my mind... I now want to find someone who studies Psychology. How many people study Psychology?**  
+-choose an answer-
 
 ## Exercise 6: Guess Who?
 
-**We can filter based on multiple criteria**.
+**Now let's play Guess Who!**  
+We've explored the data set, organised our information, and learned how to find people who match certain characteristics. It's time to put those skills to the test.
+
+**We can now filter based on multiple criteria**.
 
 The code below will show us someone who is from Brighton, has a dog, and does not drink coffee.
 
@@ -140,11 +163,27 @@ mydata %>%
   filter(maths < 20)
 ```
 
-Use what you have learned above and adapt your code to play GUESS WHO? and complete questions 6.1-6.2 on the worksheet.
+Use what you have learned above and adapt your code to play GUESS WHO? Each of the following questions gives you clues about a person. Use RStudio to work out who we are looking for!
+
+**Question 6.1: Use the clues below to find the name of the mystery person:**  
+**Clue 1:** The person is from London.  
+**Clue 2:** They have a cat.  
+**Clue 3:** Their maths enjoyment score is less than 10.  
+
+**Who is the person?**  
+-choose an answer-
+
+**Question 6.2: Use the clues below to find the name of the next mystery person:**  
+**Clue 1:** The person studies Psychology.  
+**Clue 2:** They are from Nottingham.  
+**Clue 3:** They do not drink coffee.  
+
+**Who is the person?**  
+-choose an answer-
 
 ## Exercise 7: Create a New Variable
 
-**Sometimes we might want to compute new scores or variables**
+**Sometimes we might want to compute new scores or variables.**
 
 Add up the three enjoyment scores for `maths`, `science`, and `art` to create an overall score called `total_score`.
 
@@ -181,11 +220,16 @@ mydata %>%
   slice_max(total_score)
 ```
 
-Answer questions 7.1-7.2 on the worksheet.
+**Now let's find some more mystery people using just a single clue!**  
+**Question 7.1: What is the name of the person with the lowest maths score?**  
+-choose an answer-  
+
+**Question 7.2: What is the name of the person with the highest total enjoyment score?**  
+-choose an answer-
 
 ## Exercise 8: Counting and Removing Missing Data
 
-**Real data sets often are missing data points**
+**Real data sets often are missing data points.**
 
 Different people have differing views on how to treat missing data points. For today, we will just identify and remove any. If you view the data, you might notice there are some blanks for `degree` as not everyone is studying for one.
 
@@ -210,11 +254,13 @@ mydata <- mydata %>%
 
 Note: this will overwrite `mydata` and remove the cases.
 
-Answer question 8.1 on the worksheet.
+**Now we've identified some individuals in the group. Let's now zoom out and investigate the group as a whole.**   
+**Question 8.1: How many people in the data set did not say that they own a pet?**  
+-choose an answer-
 
 ## Exercise 9: Summary Statistics
 
-**We might want to know What was the average enjoyment score?**
+**We might want to know what was the average enjoyment score?**
 
 We can use this code to look across the data set as a whole:
 
@@ -222,13 +268,21 @@ We can use this code to look across the data set as a whole:
 summary(mydata)
 ```
 
-Look through the output in the console (bottom left panel) and answer questions 9.1-9.3 on the worksheet.
+Look through the output in the console (bottom left panel) and answer the following questions about this group of people:  
+**Question 9.1: What was the mean maths enjoyment score across the data set?**  
+-choose an answer- 
+
+**Question 9.2: What is the range for total enjoyment score across the dataset?**  
+-choose an answer-  
+
+**Question 9.3: When you look across the three subjects (maths, science, art), which had the highest mean enjoyment score?**  
+-choose an answer-  
 
 ## Exercise 10: Fixing Luke's Broken Code
 
 Help!! My code below is not working. I need your help to fix it...
 
-Fix the code below to work out how many coffees were drunk by the person from canterbury and is studying medicine. Try running the code first and then work out why it doesn't work!
+Fix the code below to work out how many coffees were drunk by the person from Canterbury and is studying medicine. Try running the code first and then work out why it doesn't work!
 
 ``` r
 mydata %>%
@@ -242,9 +296,15 @@ mydata =
   filter(city == "London", pet == "hamsta", degree == "psychology", coffee >1)
 ```
 
-Answer questions 10.1-10.2 on the worksheet.
+Answer the following questions.
 
 If you get stuck, use the hints below.
+
+**Question 10.1: How many coffees were drunk by the person from Canterbury and is studying medicine?**  
+-choose an answer-
+
+**Question 10.2: What is the name of the person from London, has a hamster, studies Psychology, and did not drink coffee?**  
+-choose an answer-
 
 ------------------------------------------------------------------------
 
@@ -267,6 +327,39 @@ If you get stuck, use the hints below.
 </details>
 
 ------------------------------------------------------------------------
+
+**Below are three optional GUESS WHO questions requiring you to fix the code to find the mystery person!**
+
+**Bonus question 1: Fix the code below to find the name of the mystery person:**  
+**Clue 1:** The person is from Manchester.  
+**Clue 2:** They study medicine.  
+**Clue 3:** They do not enjoy art.
+
+mydata %>%  
+  filter(city == "Manchester", degree = "Medicine", art < 10)  
+
+**Who is the person?**  
+-choose an answer-
+
+**Bonus question 2: Fix the code below to see who owns a gecko.**  
+``` r
+mydata %>%  
+  filter(!pet = "geck0") 
+```
+
+**Who is the person?**  
+-choose an answer-  
+
+**Bonus question 3: Fix the code below to see how many students study law and are from London.**  
+``` r
+mydata %>% 
+  filter(degree = "law", city == "London"),
+  count() 
+```
+
+**Who is the person?**  
+-choose an answer-
+
 
 ------------------------------------------------------------------------
 
