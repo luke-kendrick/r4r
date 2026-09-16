@@ -13,6 +13,7 @@ output:
       after_body: home.html
 css: custom.css
 ---
+
 ## Introduction
 
 Workshop Aims:
@@ -29,7 +30,7 @@ Workshop Aims:
 
 -   The first part of the workshop involves a guided tutorial where you should follow along on screen.
 
--   Raise your hand at anytime if you need help, have a question, or get stuck—someone will come over to assist you.
+-   Raise your hand at anytime if you need help, have a question, or get stuck---someone will come over to assist you.
 
 -   We are not able to offer technical support with R/RStudio on your personal device. For today, please use the campus PCs.
 
@@ -49,9 +50,9 @@ Workshop Aims:
 
     -   **`RStudio = the program.`**
 
-# Open RStudio I
+# Open RStudio (1)
 
-![](images/clipboard-3796714733.png){width="195" height="74"}
+![](images/openr.png){width="695" height="220"}
 
 -   Search for "RStudio" on the PC and identify the logo (above).
 
@@ -59,13 +60,13 @@ Workshop Aims:
 
 -   A common error is to open the language and not opening the "Studio" program. Make sure you open RStudio.
 
-# Open RStudio II
+# Open RStudio (2)
 
 When you first open RStudio it should look like this:
 
 ![](images/rstudio1.jpg){width="700"}
 
-# RStudio Layout I
+# RStudio Layout (1)
 
 -   When RStudio opens you'll see **three** panels. We actually want a fourth open.
 
@@ -77,13 +78,13 @@ When you first open RStudio it should look like this:
 
     -   `CMD` + `SHIFT` + `N` (mac)
 
-# RStudio Layout II
+# RStudio Layout (2)
 
 Now your RStudio should look like this. There are **four** panels:
 
 ![](images/rstudio2.jpg){width="700" height="461"}
 
-# RStudio Layout III
+# RStudio Layout (3)
 
 You need to learn what each panel does. We will go through them one by one.
 
@@ -91,56 +92,58 @@ You need to learn what each panel does. We will go through them one by one.
 
 # Script Panel
 
-![](images/rstudio3.jpg){width="620"}
+![](images/script.png){width="480"}
 
 -   The R script is the top left and is an editable space where you can type, enter, and run your code. You can save and share your R script, a bit like a Word document.
 
 # Console Panel
 
-![](images/rstudio3.jpg){width="620"}
+![](images/console.png){width="480"}
 
--   The R console is the bottom left panel. Think of this as a “results” panel. This is where you can read the results of your code (or an error message if your code did not work!).
+-   The R console is the bottom left panel. Think of this as a "results" panel. This is where you can read the results of your code (or an error message if your code did not work!).
 -   Avoid typing any code into this panel. Code entered directly into the console is not saved in your script.
 
 # Environment Panel
 
-![](images/rstudio3.jpg){width="620"}
+![](images/environment.png){width="480"}
 
--   The environment panel is the top right panel. It can be helpful to think of this as a bit like a memory space where RStudio will keep hold of any objects/data/information that you ask it to. You’ll learn more about saving things to the environment later in this chapter.
+-   The environment panel is the top right panel. It can be helpful to think of this as a bit like a memory space where RStudio will keep hold of any objects/data/information that you ask it to. You'll learn more about saving things to the environment later in this chapter.
 
 # Miscellaneous/Output Panel
 
-![](images/rstudio3.jpg){width="620"}
+![](images/misc.png){width="480"}
 
 -   The bottom right panel is what I call the miscellaneous panel. It has a few different purposes that include viewing files, plots, packages, or finding help.
 -   Also known as Files/Plots/Packages/Help/Viewer panel.
 
 # RStudio Layout Summary
 
--   As you progress through this workshop and PS2010, you'll learn more about what these panels can do.
+-   As you progress through this workshop and PS2010 this year, you'll learn more about what these panels can do.
 
 -   A key take home message is that you need **four** of them and that you enter and save your code in the script (top left) panel.
 
-# Using R Code I
+# Writing Code (1)
 
 -   Coding sounds scary. However, just think of it as a series of instructions.
+
 ``` r
 'stand up', and then,
 'walk towards the window' and then,
 'return to your seat'
 ```
+
 -   Like with any language there are rules and a structure.
 -   It can be a bit quirky to begin with, even the smallest mistakes can change the meaning.
 
-# Using R Code II
+# Writing Code (2)
 
--   **R won't guess what you mean. It needs instructions to be written exactly.** 
+-   **R won't guess what you mean. It needs instructions to be written exactly.**
 
--   A typo or incorrectly placed symbol could mean your code does not work—proof read it carefully and take your time.
+-   A typo or incorrectly placed symbol could mean your code does not work---proof read it carefully and take your time.
 
 ![](images/grandma.png){width="533"}
 
-# R Code Basics I
+# R Code Basics (1)
 
 ::: demo-marker
 :::
@@ -159,9 +162,12 @@ date()
 
 -   Check the console panel (bottom left) and you should see today's date as the result!
 
-# R Code Basics II
+# R Code Basics (2)
 
--   Congratulations! You've run your first bit of code. Now what...
+::: demo-marker
+:::
+
+-   Congratulations! You've run your first bit of code. Now what's next?
 -   RStudio is a bit like a very fancy calculator.
 -   Try and run this code:
 
@@ -175,7 +181,7 @@ date()
 12345*54321
 ```
 
-# R Code Basics III
+# R Code Basics (3)
 
 -   In case you have wondered the answer to 12345 x 54321 it is 670592745.
 
@@ -191,14 +197,13 @@ date()
 
 ![](images/thedigitalartist-cardboard-box-1276929_1920.jpg){width="282"}
 
-# Creating an Object I
+# Creating an Object (1)
 
 -   In RStudio we can assign a value or data to an object. However, you will need to create and name your box.
--   We give our box a name so that we can find and retrieve it again later. 
+-   We give our box a name so that we can find and retrieve it again later.
 -   Let's work through an example.
 
-
-# Creating an Object II
+# Creating an Object (2)
 
 ``` r
 box <- "chocs"
@@ -206,7 +211,7 @@ box <- "chocs"
 
 -   `box` is the name of the object ready for something to be placed inside. You could call a box anything you like, I could have called it `myobject` or `data` if it contained some data.
 
-# Creating an Object III
+# Creating an Object (3)
 
 ``` r
 box <- "chocs"
@@ -215,7 +220,7 @@ box <- "chocs"
 -   Next there are two individual symbols, which when combined become an assignment operator. It is essentially an arrow `<-` made up of a less than sign `<` and a dash `-`
 -   This means anything on the right side of the arrow will be placed into the object (or our newly named box).
 
-# Creating an Object IV
+# Creating an Object (4)
 
 ``` r
 box <- "chocs"
@@ -225,31 +230,34 @@ box <- "chocs"
 -   It is text information (rather than numbers or data) and so it is in speech marks in our code.
 -   Run the code now and then check the environment panel (top right).
 
-# Creating an Object V
+# Creating an Object (5)
 
--   If you look at the top right panel (called the environment), you should spot that an object has appeared called `box`. That’s your newly created object.
--   The environment panel acts a bit like a warehouse or storage unit for our boxes (see, I told you the analogy would make sense…).
+-   If you look at the top right panel (called the environment), you should spot that an object has appeared called `box`. That's your newly created object.
+-   The environment panel acts a bit like a warehouse or storage unit for our boxes (see, I told you the analogy would make sense...).
 -   When conducting data analysis, you may end up with quite a few objects stored in the environment.
+
+
+# Why Do We Need Objects?
+
+![](images/boxes.png){width="320"}
+
+-   Objects allow us to handle our data efficiently, without them, we would have to write everything from scratch every time.
+
+-   Objects save you time and effort by letting you:
+
+    -   Store data and information in one place.\
+    -   Reuse your work.\
+    -   Keep your code clean and organised.
 
 # Creating More Objects
 
--   Almost anything can be committed to an object in RStudio. For example, run and adapt the code below. Change “Luke” to your own name! Then check your environment to see these additional objects.
+-   Almost anything can be committed to an object in RStudio. For example, run and adapt the code below. Change "Luke" to your own name! Then check your environment to see these additional objects.
 
 ``` r
 my_name <- "Luke"
 answer <- 12345*54321
 pi <- 3.14
 ```
-
-# Why Do We Need Objects?
-![](images/boxes.jpg){width="620"}
-
--   Objects allow us to handle our data efficiently, without them, we would have to write everything from scratch every time.  
-
--   Objects save you time and effort by letting you:  
-    -   Store data and information in one place.  
-    -   Reuse your work.  
-    -   Keep your code clean and organised.  
 
 # print()
 
@@ -261,7 +269,7 @@ print(box)
 
 -   Change `box` to the name of the other objects: `my_name`, `answer`, `pi` and check the console each time you run the code.
 
-# Naming Objects I
+# Naming Objects (1)
 
 -   Try to keep object names short.
 -   Often you will need to refer to them in your code, and typing out long names is time consuming.
@@ -274,7 +282,7 @@ name <- "Luke"
 
 -   `name` is shorter than `my_name`
 
-# Naming Objects II
+# Naming Objects (2)
 
 ``` r
 ans <- answer
@@ -283,7 +291,7 @@ ans <- answer
 -   `ans` is shorter than `answer`
 -   You might notice here you've put an existing box into a new box called `ans`.
 
-# Code is Case Sensitive
+# coDe iS CasE SenSiTive
 
 Try running:
 
@@ -300,23 +308,26 @@ print(name)
 ```
 
 # When R Doesn't Understand
+
 -   **Errors will happen!**
+
 -   **R is very literal, and error messages often give you clues.**
 
 -   Try this:
+
     -   What was I trying to do?
     -   What is R telling me?
     -   Check what R mentions in the error message.
 
-# Functions and Arguments I
+# Functions and Arguments (1)
 
 ![](images/function.png){width="412"}
 
--   Coding in R is mostly built around using a series of functions and arguments—both work together to carry out your instruction(s).
+-   Coding in R is mostly built around using a series of functions and arguments---both work together to carry out your instruction(s).
 
 -   You have actually already used functions and arguments on the previous slides.
 
-# Functions and Arguments II
+# Functions and Arguments (2)
 
 -   `print()` is a function which prints something to the console.
 -   The empty parentheses is where you pass an argument.
@@ -328,7 +339,7 @@ print(name)
 
 -   The argument here is `name` or the object we want printed.
 
-# Functions and Arguments III
+# Functions and Arguments (3)
 
 -   Let's try a different function and argument.
 
@@ -344,7 +355,7 @@ round(pi)
 
 -   You can also just use `pi`.
 
-# Functions and Arguments IV
+# Functions and Arguments (4)
 
 -   Some functions require multiple arguments.
 
@@ -354,9 +365,9 @@ round(pi)
 round(pi, digits = 2)
 ```
 
--   If you run the code above, you’ll now get a slightly different answer because the additional argument `digits = 2` has changed how the function behaves. Rather than rounding to a whole number, it will now round it to two decimal places.
+-   If you run the code above, you'll now get a slightly different answer because the additional argument `digits = 2` has changed how the function behaves. Rather than rounding to a whole number, it will now round it to two decimal places.
 
-# Functions and Arguments V
+# Functions and Arguments (5)
 
 -   A function is something that contains a set of instructions that takes input, does something with it, and gives you an output.
 -   Functions tend to require quite specific arguments.
@@ -367,7 +378,7 @@ round(pi, digits = 2)
 ?round()
 ```
 
-# Comments I
+# Comments (1)
 
 -   You might be thinking "wow, **objects, environment, functions, arguments**, how will I remember what the code does?"
 -   Don't panic because R allows you to add your own notes (or comments)!
@@ -375,7 +386,7 @@ round(pi, digits = 2)
 -   R will ignore everything after a hash.
 -   Look at the examples on the next slide and then amend your own code to add your own notes.
 
-# Comments II
+# Comments (2)
 
 ``` r
 date() #will return today's date
@@ -444,7 +455,7 @@ library(tidyverse)
 
 -   But first...we need a data file.
 
-# Files and Folder Structure I
+# Files and Folder Structure (1)
 
 -   Many previous PS2010 students have had difficulty with computer folder structures.
 
@@ -455,15 +466,17 @@ library(tidyverse)
     -   You might already have an existing file, e.g., Documents.
 
     -   I'd recommend you create a new folder somewhere called "Ready4R" and save it there.
-    
-# Files and Folder Structure II
+
+# Files and Folder Structure (2)
+
 ![](images/folder_structure.png){width="600"}
 
--   Saving your data in a folder that makes sense, such as "Ready4R", will help you find your files next time.  
--   This will be especially important when you need to analyse your own data.  
+-   Saving your data in a folder that makes sense, such as "Ready4R", will help you find your files next time.\
+-   This will be especially important when you need to analyse your own data.\
 -   For example: `Year_2 > PS2010 (subfolder) > Ready4R (subfolder)`.
 
 # Working Directory
+
 ![](images/folder_structure_WD.png){width="600"}
 
 -   The working directory is a folder on your computer which RStudio will use to find any data files.
@@ -472,13 +485,13 @@ library(tidyverse)
 
     -   In this example, `Ready4R` would be your working directory, as it's where we saved our data `heights.csv`.
 
-# Set Working Directory I
+# Set Working Directory (1)
 
 -   Set the working directory now (`Session` \> `Set Working Directory` \> `Choose Directory`:
 
     ![](images/setwd.jpg){width="600"}
 
-# Set Working Directory II
+# Set Working Directory (2)
 
 -   You need to select the **Folder** you saved the `height.csv` file in (e.g., "Ready4R").
 
@@ -486,47 +499,64 @@ library(tidyverse)
 
 # Check Working Directory
 
-- Run the code below to ask RStudio where the current working directory is.
-- You should check that this is correct and that it is the place your `height.csv` file is.
+-   Run the code below to ask RStudio where the current working directory is.
+-   You should check that this is correct and that it is the place your `height.csv` file is.
 
-```r
+``` r
 getwd()
 ```
 
 # Import Data
 
-- Now you will use your first tidyverse function: `read_csv()`
+-   Now you will use your first tidyverse function: `read_csv()`
 
-```r
+``` r
 dat <- read_csv("height.csv")
 ```
 
 # read_csv() Explained
 
-```r
+``` r
 dat <- read_csv("height.csv")
 ```
 
-- `dat` is an object. Dat is a short name for "data". You could call it something else.
-- `<-` is the assignment operator. Anything on the right side of the arrow will be assigned to the object on the left.
-- `read_csv()` is a function which will read/look inside a `.csv` file
-- `"height.csv"` is the argument which directs the function to a specific file name. Note it is in speech marks because it is a file name.
+-   `dat` is an object. Dat is a short name for "data". You could call it something else.
+-   `<-` is the assignment operator. Anything on the right side of the arrow will be assigned to the object on the left.
+-   `read_csv()` is a function which will read/look inside a `.csv` file
+-   `"height.csv"` is the argument which directs the function to a specific file name. Note it is in speech marks because it is a file name.
 
 # Check the Environment
 
-- You should now be able to check the **environment** panel.
-- Remember from earlier that this panel is a bit like our warehouse where our boxes (or objects) are stored.
-- You should see your newly created object called `dat`.
-- If not, something has gone terribly wrong so put your hand up for some in-class help.
+-   You should now be able to check the **environment** panel.
+-   Remember from earlier that this panel is a bit like our warehouse where our boxes (or objects) are stored.
+-   You should see your newly created object called `dat`.
+-   If not, something has gone terribly wrong so put your hand up for some in-class help.
 
 # View Data
 
-- You can 
+-   You can use the `view()` function to open up the object and view the raw data.
+
+```r
+view(dat) # opens object to check raw data
+```
 
 # Summarise Data
+
+- Finally, you can very quickly summarise the data using the `summary()` function.
+- This will provide some (very) basic values within the data set.
+
+```r
+summary(dat)
+```
 
 # What's Next
 
 Thanks for taking part.
+
+In this part of the workshop you have explored some R and RStudio basics.
+
+This means you are now ready for the next stage...head back to the home screen to find the practical activity (part two of today's workshop).
+
+You should work on this independently, but do not fear...we will be on hand the help you if you get stuck.
 
 <a href="files/R4R-slides.pdf" class="pdf-download" download> ↓ Download slides as PDF </a>
