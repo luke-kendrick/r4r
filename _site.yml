@@ -6,11 +6,11 @@ include:
   - "files/*"
 
 navbar:
-  title: "Ready4R?"
+  title: "Ready4R"
   left:
     - text: "Home"
       href: index.html
-    - text: "Tutorial Slides"
+    - text: "Part 1: Guided Tutorial"
       href: part1.html
-    - text: "Practice Activity"
+    - text: "Part 2: Independent Practical Task"
       href: part2.html

@@ -24,7 +24,11 @@
   background: var(--background);
 }
 
-/* Headings */
+
+/* ================================
+   Reveal headings
+   ================================ */
+
 .reveal h1,
 .reveal h2,
 .reveal h3 {
@@ -47,13 +51,21 @@
   font-size: 1.25em;
 }
 
-/* Body text */
+
+/* ================================
+   Reveal body text
+   ================================ */
+
 .reveal p,
 .reveal li {
   line-height: 1.45;
 }
 
-/* Links */
+
+/* ================================
+   Reveal links
+   ================================ */
+
 .reveal a {
   color: var(--primary);
   text-decoration: none;
@@ -64,7 +76,11 @@
   text-decoration: underline;
 }
 
-/* Lists */
+
+/* ================================
+   Reveal lists
+   ================================ */
+
 .reveal ul,
 .reveal ol {
   margin-top: 0.5em;
@@ -74,23 +90,21 @@
   margin-bottom: 0.35em;
 }
 
-/* Code */
-.reveal pre {
-  box-shadow: none;
-  border-radius: 6px;
-}
 
-.reveal code {
-  border-radius: 4px;
-}
+/* ================================
+   Reveal images
+   ================================ */
 
-/* Images */
 .reveal img {
   border: none;
   box-shadow: none;
 }
 
-/* Slide number */
+
+/* ================================
+   Slide number
+   ================================ */
+
 .reveal .slide-number {
   font-size: 0.6em;
   color: var(--text);
@@ -106,21 +120,27 @@
   top: 15px;
   left: 20px;
   z-index: 1000;
+
   padding: 7px 14px;
+
   background: transparent;
   color: var(--primary-dark) !important;
+
   border: 1px solid var(--primary);
   border-radius: 5px;
+
   font-family: "Aptos", "Segoe UI", Arial, sans-serif;
   font-size: 15px;
   font-weight: 500;
+
   text-decoration: none !important;
+
   transition: all 0.2s ease;
 }
 
 .home-button:hover {
   background: var(--primary);
-  color: white !important;
+  color: #FFFFFF !important;
   border-color: var(--primary);
 }
 
@@ -136,9 +156,16 @@
 }
 
 
-/* =========================================
+/* Hide Home button while menu open */
+
+body:has(.slide-menu.active) .home-button {
+  display: none;
+}
+
+
+/* ================================
    Normal R Markdown pages
-   ========================================= */
+   ================================ */
 
 body {
   font-family: "Aptos", "Segoe UI", Arial, sans-serif;
@@ -148,12 +175,18 @@ body {
   line-height: 1.6;
 }
 
+
 /* Main page content */
+
 .container {
   max-width: 1100px;
 }
 
-/* Headings */
+
+/* ================================
+   Normal page headings
+   ================================ */
+
 body h1,
 body h2,
 body h3,
@@ -178,7 +211,11 @@ body h3 {
   font-size: 1.3em;
 }
 
-/* Links */
+
+/* ================================
+   Normal page links
+   ================================ */
+
 body a {
   color: var(--primary);
 }
@@ -207,7 +244,9 @@ body a:hover {
   background: var(--primary-dark) !important;
 }
 
+
 /* Active navbar page */
+
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
@@ -230,7 +269,7 @@ body th {
 
 
 /* ================================
-   Images
+   Normal page images
    ================================ */
 
 body img {
@@ -277,12 +316,6 @@ body img {
 }
 
 
-/* Hide Home button while slide menu is open */
-body:has(.slide-menu.active) .home-button {
-  display: none;
-}
-
-
 /* ================================
    Copy code button
    ================================ */
@@ -309,6 +342,7 @@ body:has(.slide-menu.active) .home-button {
   border-radius: 6px;
 
   cursor: pointer;
+  overflow: hidden !important;
 
   transition:
     background 0.15s ease,
@@ -327,6 +361,22 @@ body:has(.slide-menu.active) .home-button {
 }
 
 
+/* Larger copy button on presentation slides */
+
+.reveal .copy-code-button {
+  width: 32px;
+  height: 32px;
+  top: 8px;
+  right: 8px;
+  border-radius: 6px;
+}
+
+.reveal .copy-code-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+
 /* ================================
    Cleaner code blocks
    ================================ */
@@ -334,8 +384,10 @@ body:has(.slide-menu.active) .home-button {
 pre {
   max-height: none !important;
   overflow: visible !important;
+
   white-space: pre-wrap !important;
   word-wrap: break-word !important;
+
   padding-right: 48px !important;
 }
 
@@ -345,10 +397,6 @@ pre code {
   word-break: normal !important;
 }
 
-.copy-code-button {
-  overflow: hidden !important;
-}
-
 
 /* ================================
    Reveal slide code blocks
@@ -356,14 +404,13 @@ pre code {
 
 .reveal pre {
   background: #F1F7F8 !important;
+
   border: 1px solid var(--border) !important;
   border-left: 4px solid var(--primary) !important;
   border-radius: 8px !important;
 
-  /* Internal spacing */
   padding: 12px 42px 12px 16px !important;
 
-  /* Reduce space above/below code chunks */
   margin-top: 0.1em !important;
   margin-bottom: 0.1em !important;
 
@@ -374,14 +421,20 @@ pre code {
   background: transparent !important;
   color: var(--text) !important;
 
-  /* Slightly larger presentation code */
   font-size: 0.99em !important;
   line-height: 1.35;
 }
-/* Slightly smaller text for busy slides */
+
+
+/* ================================
+   Smaller text for busy slides
+   ================================ */
+
 .reveal section.compact {
   font-size: 0.82em;
 }
+
+
 /* ================================
    Consistent slide alignment
    ================================ */
@@ -390,26 +443,50 @@ pre code {
   text-align: left;
 }
 
-/* Keep the main presentation title slide centred */
+
+/* Keep title slide centred */
+
 .reveal #title-slide {
   text-align: center;
 }
-/* Centre all images on slides */
+
+
+/* Centre images on slides */
+
 .reveal .slides section img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-/* Inline code on slides */
+
+
+/* Allow small images inside bullet points */
+
+.reveal li img {
+  display: inline-block !important;
+  vertical-align: middle;
+  margin: 0 6px !important;
+}
+
+
+/* ================================
+   Inline code on slides
+   ================================ */
+
 .reveal p code,
 .reveal li code {
   background: #E8F3F4;
-  color: #154A52;
+  color: var(--primary-dark);
+
   padding: 2px 6px;
+
   border-radius: 4px;
+
   font-size: 0.9em;
   font-weight: 500;
 }
+
+
 /* ================================
    Title slide logo
    ================================ */
@@ -417,11 +494,16 @@ pre code {
 .reveal #title-slide .title-logo {
   width: 150px;
   height: auto;
+
   display: block;
+
   margin: 20px auto 15px auto;
+
   border: none;
   box-shadow: none;
 }
+
+
 /* ================================
    Live demo marker
    ================================ */
@@ -429,33 +511,36 @@ pre code {
 .demo-marker {
   position: absolute;
   top: 18px;
-  right: 20px;
+  right: 5px;
 
-  width: 120px;
-  height: 100px;
+  width: 80px;
+  height: 70px;
 
   background-image: url("images/demo-marker.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 /* ================================
    PDF download button
    ================================ */
 
 .reveal .pdf-download {
   display: inline-block;
+
   margin-top: 1em;
   padding: 10px 18px;
 
   background: var(--primary);
-  color: #ffffff !important;
+  color: #FFFFFF !important;
 
   border: 1px solid var(--primary);
   border-radius: 6px;
 
   font-size: 0.65em;
   font-weight: 500;
+
   text-decoration: none !important;
 
   transition: all 0.2s ease;
@@ -464,8 +549,10 @@ pre code {
 .reveal .pdf-download:hover {
   background: var(--primary-dark);
   border-color: var(--primary-dark);
-  color: #ffffff !important;
+  color: #FFFFFF !important;
 }
+
+
 /* ================================
    Multiple-choice questions
    ================================ */
@@ -476,8 +563,14 @@ pre code {
 
 .mcq-select {
   padding: 8px 36px 8px 12px;
+
   font-size: 1em;
+
   border: 2px solid #D6E2E5;
   border-radius: 6px;
+
+  background: #FFFFFF;
+  color: var(--text);
+
   cursor: pointer;
 }

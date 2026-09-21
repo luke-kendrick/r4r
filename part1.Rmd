@@ -204,7 +204,6 @@ date()
 -   Let's work through an example.
 
 # Creating an Object (2)
-
 ``` r
 box <- "chocs"
 ```
@@ -221,7 +220,8 @@ box <- "chocs"
 -   This means anything on the right side of the arrow will be placed into the object (or our newly named box).
 
 # Creating an Object (4)
-
+::: demo-marker
+:::
 ``` r
 box <- "chocs"
 ```
@@ -250,7 +250,8 @@ box <- "chocs"
     -   Keep your code clean and organised.
 
 # Creating More Objects
-
+::: demo-marker
+:::
 -   Almost anything can be committed to an object in RStudio. For example, run and adapt the code below. Change "Luke" to your own name! Then check your environment to see these additional objects.
 
 ``` r
@@ -260,7 +261,8 @@ pi <- 3.14
 ```
 
 # print()
-
+::: demo-marker
+:::
 -   You can check what is in a box easily by running this code:
 
 ``` r
@@ -270,7 +272,8 @@ print(box)
 -   Change `box` to the name of the other objects: `my_name`, `answer`, `pi` and check the console each time you run the code.
 
 # Naming Objects (1)
-
+::: demo-marker
+:::
 -   Try to keep object names short.
 -   Often you will need to refer to them in your code, and typing out long names is time consuming.
 -   Always use lowercase letters and use an underscore `_` if you need a space (or just avoid spaces if you can).
@@ -283,7 +286,8 @@ name <- "Luke"
 -   `name` is shorter than `my_name`
 
 # Naming Objects (2)
-
+::: demo-marker
+:::
 ``` r
 ans <- answer
 ```
@@ -294,7 +298,8 @@ ans <- answer
 # coDe iS CasE SenSiTive
 
 Try running:
-
+::: demo-marker
+:::
 ``` r
 print(Name)
 ```
@@ -321,14 +326,15 @@ print(name)
 
 # Functions and Arguments (1)
 
-![](images/function.png){width="412"}
+![](images/function.png){width="612"}
 
 -   Coding in R is mostly built around using a series of functions and arguments---both work together to carry out your instruction(s).
 
 -   You have actually already used functions and arguments on the previous slides.
 
 # Functions and Arguments (2)
-
+::: demo-marker
+:::
 -   `print()` is a function which prints something to the console.
 -   The empty parentheses is where you pass an argument.
 -   An argument is information to help a function.
@@ -340,7 +346,8 @@ print(name)
 -   The argument here is `name` or the object we want printed.
 
 # Functions and Arguments (3)
-
+::: demo-marker
+:::
 -   Let's try a different function and argument.
 
 ``` r
@@ -356,7 +363,8 @@ round(pi)
 -   You can also just use `pi`.
 
 # Functions and Arguments (4)
-
+::: demo-marker
+:::
 -   Some functions require multiple arguments.
 
 -   If we want to round `pi` to **two** decimal places, we need another argument.
@@ -368,7 +376,8 @@ round(pi, digits = 2)
 -   If you run the code above, you'll now get a slightly different answer because the additional argument `digits = 2` has changed how the function behaves. Rather than rounding to a whole number, it will now round it to two decimal places.
 
 # Functions and Arguments (5)
-
+::: demo-marker
+:::
 -   A function is something that contains a set of instructions that takes input, does something with it, and gives you an output.
 -   Functions tend to require quite specific arguments.
 -   One useful tip is to use `?` to learn about any function.
@@ -387,7 +396,8 @@ round(pi, digits = 2)
 -   Look at the examples on the next slide and then amend your own code to add your own notes.
 
 # Comments (2)
-
+::: demo-marker
+:::
 ``` r
 date() #will return today's date
 round(pi, digits = 4) #will round pi to four decimal places.
@@ -395,7 +405,7 @@ round(pi, digits = 4) #will round pi to four decimal places.
 
 -   **Top Tip**: Always use comments so that when you come back to your code, you can understand it.
 
-![](images/cat.jpg){width="317"}
+![](images/cat.jpg){width="417"}
 
 # Packages
 
@@ -417,7 +427,8 @@ install.packages("tidyverse") # install tidyverse package
 -   Just like a phone app, you only need to install a package once on your device.
 
 # Load Packages
-
+::: demo-marker
+:::
 -   Installing a package is the first step. Next you need to load it.
 -   To load a package you'll use the `library()` function.
 -   You'll need to run this each time you start a new session in R.
@@ -492,13 +503,15 @@ library(tidyverse)
     ![](images/setwd.jpg){width="600"}
 
 # Set Working Directory (2)
-
+::: demo-marker
+:::
 -   You need to select the **Folder** you saved the `height.csv` file in (e.g., "Ready4R").
 
     ![](images/setwd2.jpg){width="600"}
 
 # Check Working Directory
-
+::: demo-marker
+:::
 -   Run the code below to ask RStudio where the current working directory is.
 -   You should check that this is correct and that it is the place your `height.csv` file is.
 
@@ -507,7 +520,8 @@ getwd()
 ```
 
 # Import Data
-
+::: demo-marker
+:::
 -   Now you will use your first tidyverse function: `read_csv()`
 
 ``` r
@@ -533,7 +547,8 @@ dat <- read_csv("height.csv")
 -   If not, something has gone terribly wrong so put your hand up for some in-class help.
 
 # View Data
-
+::: demo-marker
+:::
 -   You can use the `view()` function to open up the object and view the raw data.
 
 ```r
@@ -544,7 +559,8 @@ view(dat) # opens object to check raw data
 
 - Finally, you can very quickly summarise the data using the `summary()` function.
 - This will provide some (very) basic values within the data set.
-
+::: demo-marker
+:::
 ```r
 summary(dat)
 ```
@@ -560,3 +576,56 @@ This means you are now ready for the next stage...head back to the home screen t
 You should work on this independently, but do not fear...we will be on hand the help you if you get stuck.
 
 <a href="files/R4R-slides.pdf" class="pdf-download" download> ↓ Download slides as PDF </a>
+
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const copyIcon = `
+    <svg width="17" height="17" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </svg>`;
+
+  const checkIcon = `
+    <svg width="17" height="17" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>`;
+
+  document.querySelectorAll("pre code").forEach(function (codeBlock) {
+
+    const pre = codeBlock.parentElement;
+
+    const button = document.createElement("button");
+    button.className = "copy-code-button";
+    button.type = "button";
+    button.innerHTML = copyIcon;
+    button.title = "Copy code";
+    button.setAttribute("aria-label", "Copy code");
+
+    button.addEventListener("click", async function () {
+
+      await navigator.clipboard.writeText(codeBlock.innerText);
+
+      button.innerHTML = checkIcon;
+      button.title = "Copied";
+
+      setTimeout(function () {
+        button.innerHTML = copyIcon;
+        button.title = "Copy code";
+      }, 1500);
+
+    });
+
+    pre.style.position = "relative";
+    pre.appendChild(button);
+
+  });
+
+});
+</script>
+```
