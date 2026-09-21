@@ -14,9 +14,11 @@ output:
 ---
 
 # Welcome to "Ready4R"
-This is a workshop session designed for Y2 Undergraduate Psychology Students at Royal Holloway University of London to prepare them for the year ahead using R and RStudio for data analysis.
+This is a workshop designed for Y2 Undergraduate Psychology Students at Royal Holloway University of London to prepare them for the year ahead using R and RStudio for data analysis.
 
-The workshop comprises of two parts: a guided tutorial with slides and a practical activity.
+The workshop comprises of two parts: (1) a guided tutorial with slides and (2) an independent practical activity.
+
+After completing this you should be ready for R!
 
 ## License 
 
@@ -26,6 +28,12 @@ This work is licensed under Creative Commons Attribution-ShareAlike 4.0 Internat
 
 This is resource is a work in progress, and we’re continually updating and improving it.
 
-This workshop was written and created by Luke Kendrick and Eleanor Alderman, Department of Psychology Royal Holloway University of London.
+This workshop was written and created by:
+
+**Luke Kendrick**
+
+**Eleanor Alderman**
+
+*Department of Psychology Royal Holloway University of London.*
 
 If you spot an error or something that doesn’t look quite right, please get in touch: luke.kendrick@rhul.ac.uk.

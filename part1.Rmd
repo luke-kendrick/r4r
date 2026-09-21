@@ -1,6 +1,6 @@
 ---
-title: "R4R? Guided Tutorial"
-author: "Dr. Luke Kendrick, Department of Psychology Royal Holloway University of London"
+title: "R4R: Guided Tutorial"
+author:
 subtitle: '<img src="images/mde_icon_2.png" class="title-logo">'
 output:
   revealjs::revealjs_presentation:
