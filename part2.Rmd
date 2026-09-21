@@ -4,6 +4,9 @@ output:
     css: custom.css
     includes:
       in_header: favicon.html
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 # Practical Task: Data Handling Skills
@@ -14,12 +17,16 @@ output:
 
 -   Practice inspecting your data in RStudio.
 
--   Use different data wrangling functions to develop your data handling skills.
+-   Use different data wrangling functions to develop your data handling
+    skills.
 
 -   Check basic summary statistics.
 
-**Guess Who**  
-**Your task:** You have been given a data set containing information about a group of people. You will use RStudio to inspect, modify, and filter the data set before investigating a series of clues and identify mystery people within the data.
+**Guess Who**\
+**Your task:** You have been given a data set containing information
+about a group of people. You will use RStudio to inspect, modify, and
+filter the data set before investigating a series of clues and identify
+mystery people within the data.
 
 ## Exercise 1: Import the Data
 
@@ -38,36 +45,59 @@ Next import the data file and store it as an object called `dataset`.
 dataset <- read_csv("guess_who.csv")
 ```
 
-If you see an error saying cannot find function `read_csv()` this usually means you have not loaded (or installed) the tidyverse package.
+If you see an error saying cannot find function `read_csv()` this
+usually means you have not loaded (or installed) the tidyverse package.
 
 ## Exercise 2: Inspect and Check Your Data
 
-You've just imported your data file. Before we start playing Guess Who, let's investigate what information we have about our group of people.  
+You've just imported your data file. Before we start playing Guess Who,
+let's investigate what information we have about our group of people.
 
 **Take a look at your newly imported data file.**
 
-Check the top right panel (the environment) and also use the code below to inspect your data set.
+Check the top right panel (the environment) and also use the code below
+to inspect your data set.
 
 ``` r
 view(dataset) # this will open the data in a new tab.
 names(dataset) # this will show the variable names.
 ```
 
-It is really important to look at the variable names as you'll be using them in code later on.  
+It is really important to look at the variable names as you'll be using
+them in code later on.
 
-Answer the following questions. The drop down will turn **green if correct** and **red if incorrect.**  
+Answer the following questions. The drop down will turn **green if
+correct** and **red if incorrect.**
 
-**Question 2.1: How many variables does this data set have?**  
--choose an answer-
+::: mcq
+<p><strong>Q2.1: **How many variables does this data set have?**</strong></p>
 
-**Question 2.2: Which variable would you use to find out where someone is from?**  
--choose an answer-
+<select class="mcq-select"
+  onchange="checkAnswer(this)"> <option value="">Choose an
+answer...</option> <option value="wrong">9</option>
+<option value="correct">11</option> <option value="wrong">10</option>
+<option value="wrong">8</option> </select>
+:::
+
+::: mcq
+<p><strong>Q2.2: **Which variable would you use to to find out where someone
+is from?**</strong></p>
+
+<select class="mcq-select"
+  onchange="checkAnswer(this)"> <option value="">Choose an
+answer...</option> <option value="correct">city</option>
+<option value="wrong">name</option>
+<option value="wrong">degree</option> <option value="wrong">id</option>
+</select>
+:::
 
 ## Exercise 3: Change a Variable Name
 
-**One of the variable names is quite long. This can be annoying if we have to keep typing it out.**
+**One of the variable names is quite long. This can be annoying if we
+have to keep typing it out.**
 
-Change the variable name `do_you_own_a_pet` to `pet`. The `rename()` function will let you rename a variable.
+Change the variable name `do_you_own_a_pet` to `pet`. The `rename()`
+function will let you rename a variable.
 
 ``` r
 dataset <- dataset %>%
@@ -82,11 +112,14 @@ names(dataset) # ask for the variable names again
 
 ## Exercise 4: Remove a Variable
 
-**We do not really care about the `age` variable for the next few exercises.**
+**We do not really care about the `age` variable for the next few
+exercises.**
 
 Let's remove it.
 
-The code below will create a new object (once we start removing things, it is best to keep the original data file called `dataset` in the environment)
+The code below will create a new object (once we start removing things,
+it is best to keep the original data file called `dataset` in the
+environment)
 
 ``` r
 mydata <- dataset %>%
@@ -101,15 +134,18 @@ This code will:
 
 -   "And then" `%>%`
 
--   Use the select() function to remove `age` by placing a minus symbol `-` in front of it.
+-   Use the select() function to remove `age` by placing a minus symbol
+    `-` in front of it.
 
-From now on, we will use the object called `mydata` and not the original data set.
+From now on, we will use the object called `mydata` and not the original
+data set.
 
 ## Exercise 5: Filter Cases
 
 **We can select particular cases in our data set.**
 
-For example, I could ask: how many people were from the city of Birmingham using the code below:
+For example, I could ask: how many people were from the city of
+Birmingham using the code below:
 
 ``` r
 mydata %>%
@@ -127,65 +163,118 @@ This code will:
 
 -   We use a double equals symbol `==` to specify an exact match.
 
--   I've added "birmingham" in speech marks. Note it is lowercase as to match the data set and then...
+-   I've added "birmingham" in speech marks. Note it is lowercase as to
+    match the data set and then...
 
 -   count() the number of data points.
 
-**Time to investigate!**  
-We now know what information we have about our group. Let's use RStudio to find our more...
+**Time to investigate!**\
+We now know what information we have about our group. Let's use RStudio
+to find our more...
 
-Answer the following questions. The drop down will turn **green if correct** and **red if incorrect.**  
+Answer the following questions. The drop down will turn **green if
+correct** and **red if incorrect.**
 
-**Question 5.1: I'm trying to find someone who studies Law. How many people in the data set study Law? Adapt the code above to find the answer.**  
--choose an answer-
+::: mcq
+<p><strong>Q5.1:**I'm trying to find someone who studies Law. How many people
+in the data set study Law? Adapt the code above to find the
+answer.**</strong></p>
 
-**Question 5.2: I've changed my mind... I now want to find someone who studies Psychology. How many people study Psychology?**  
--choose an answer-
+<select class="mcq-select"
+  onchange="checkAnswer(this)"> <option value="">Choose an
+answer...</option> <option value="wrong">10</option>
+<option value="correct">9</option> <option value="wrong">8</option>
+<option value="wrong">11</option> </select>
+:::
+
+::: mcq
+<p><strong>Q5.2:**I've changed my mind... I now want to find someone who
+studies Psychology. How many people study Psychology?**\*\*</strong></p>
+
+<select class="mcq-select"
+  onchange="checkAnswer(this)"> <option value="">Choose an
+answer...</option> <option value="wrong">8</option>
+<option value="wrong">5</option> <option value="correct">6</option>
+<option value="wrong">7</option> </select>
+:::
 
 ## Exercise 6: Guess Who?
 
-**Now let's play Guess Who!**  
-We've explored the data set, organised our information, and learned how to find people who match certain characteristics. It's time to put those skills to the test.
+**Now let's play Guess Who!**\
+We've explored the data set, organised our information, and learned how
+to find people who match certain characteristics. It's time to put those
+skills to the test.
 
 **We can now filter based on multiple criteria**.
 
-The code below will show us someone who is from Brighton, has a dog, and does not drink coffee.
+The code below will show us someone who is from Brighton, has a dog, and
+does not drink coffee.
 
 ``` r
 mydata %>%
   filter(city == "brighton", pet == "dog", coffee == 0)
 ```
 
-We can also use less than/more than symbols to filter data, For example, this will show all people who have a maths enjoyment score of less than 20:
+We can also use less than/more than symbols to filter data, For example,
+this will show all people who have a maths enjoyment score of less than
+20:
 
 ``` r
 mydata %>%
   filter(maths < 20)
 ```
 
-Use what you have learned above and adapt your code to play GUESS WHO? Each of the following questions gives you clues about a person. Use RStudio to work out who we are looking for!
+Use what you have learned above and adapt your code to play GUESS WHO?
+Each of the following questions gives you clues about a person. Use
+RStudio to work out who we are looking for!
 
-**Question 6.1: Use the clues below to find the name of the mystery person:**  
-**Clue 1:** The person is from London.  
-**Clue 2:** They have a cat.  
-**Clue 3:** Their maths enjoyment score is less than 10.  
+**Use the clues below to find the name of the mystery person:**\
+**Clue 1:** The person is from London.\
+**Clue 2:** They have a cat.\
+**Clue 3:** Their maths enjoyment score is less than 10.
 
-**Who is the person?**  
--choose an answer-
+::: mcq
+<p><strong>Q6.1:**Who is this person?**\*\*</strong></p>
 
-**Question 6.2: Use the clues below to find the name of the next mystery person:**  
-**Clue 1:** The person studies Psychology.  
-**Clue 2:** They are from Nottingham.  
-**Clue 3:** They do not drink coffee.  
+<select class="mcq-select"
+  onchange="checkAnswer(this)"> <option value="">Choose an
+answer...</option> <option value="wrong">Joseph</option>
+<option value="wrong">Eleanor</option>
+<option value="wrong">Victor</option>
+<option value="correct">Jose</option> </select>
+:::
 
-**Who is the person?**  
--choose an answer-
+**Question 6.2: Use the clues below to find the name of the next mystery
+person:**\
+**Clue 1:** The person studies Psychology.\
+**Clue 2:** They are from Nottingham.\
+**Clue 3:** They do not drink coffee.
+
+**Question 6.2: Use the clues below to find the name of the next mystery person:**\
+**Clue 1:** The person studies Psychology.\
+**Clue 2:** They are from Nottingham.\
+**Clue 3:** They do not drink coffee.
+
+::: mcq
+
+<p><strong>Q6.2:Who is this person?</strong></p>
+
+<select class="mcq-select" onchange="checkAnswer(this)">
+  <option value="">Choose an answer...</option>
+  <option value="wrong">Amelia</option>
+  <option value="correct">Taylor</option>
+  <option value="wrong">George</option>
+  <option value="wrong">Antonio</option>
+</select>
+
+:::
 
 ## Exercise 7: Create a New Variable
 
 **Sometimes we might want to compute new scores or variables.**
 
-Add up the three enjoyment scores for `maths`, `science`, and `art` to create an overall score called `total_score`.
+Add up the three enjoyment scores for `maths`, `science`, and `art` to
+create an overall score called `total_score`.
 
 ``` r
 mydata <- mydata %>%
@@ -194,9 +283,12 @@ mydata <- mydata %>%
 
 This code will:
 
--   Take `mydata` to overwrite it (ready to add the new variable) and then...
+-   Take `mydata` to overwrite it (ready to add the new variable) and
+    then...
 
--   Use the `mutate()` function to create a new variable named `total_score` which should equal `=` `maths` `+` `science` `+` `art`.
+-   Use the `mutate()` function to create a new variable named
+    `total_score` which should equal `=` `maths` `+` `science` `+`
+    `art`.
 
 View the data set and look for the new column to see it has worked.
 
@@ -204,7 +296,8 @@ View the data set and look for the new column to see it has worked.
 view(mydata)
 ```
 
-Now, we can look at who had the highest and lowest total enjoyment score.
+Now, we can look at who had the highest and lowest total enjoyment
+score.
 
 `slice_min` will find the row which has the lowest score:
 
@@ -220,18 +313,44 @@ mydata %>%
   slice_max(total_score)
 ```
 
-**Now let's find some more mystery people using just a single clue!**  
-**Question 7.1: What is the name of the person with the lowest maths score?**  
--choose an answer-  
+**Now let's find some more mystery people using just a single clue!**\
 
-**Question 7.2: What is the name of the person with the highest total enjoyment score?**  
--choose an answer-
+::: mcq
+
+<p><strong>Q7.1:**What is the name of the person with the lowest maths score?**</strong></p>
+
+<select class="mcq-select" onchange="checkAnswer(this)">
+  <option value="">Choose an answer...</option>
+  <option value="wrong">Jose</option>
+  <option value="wrong">Elizabeth</option>
+  <option value="correct">Yan</option>
+  <option value="wrong">Olga</option>
+</select>
+
+:::
+
+::: mcq
+
+<p><strong>Q7.2**What is the name of the person with the highest total enjoyment score?**</strong></p>
+
+<select class="mcq-select" onchange="checkAnswer(this)">
+  <option value="">Choose an answer...</option>
+  <option value="wrong">Natalya</option>
+  <option value="wrong">Oliver</option>
+  <option value="correct">Yan</option>
+  <option value="wrong">Sam</option>
+</select>
+
+:::
 
 ## Exercise 8: Counting and Removing Missing Data
 
 **Real data sets often are missing data points.**
 
-Different people have differing views on how to treat missing data points. For today, we will just identify and remove any. If you view the data, you might notice there are some blanks for `degree` as not everyone is studying for one.
+Different people have differing views on how to treat missing data
+points. For today, we will just identify and remove any. If you view the
+data, you might notice there are some blanks for `degree` as not
+everyone is studying for one.
 
 ``` r
 sum(is.na(mydata$degree))
@@ -243,7 +362,9 @@ This code will:
 
 -   Any missing data points (R calls these `is.na`)
 
--   We can then direct to a particular column using `mydata$degree`. This essentially means "look in `mydata` and then the column called `degree`. We use the dollar sign `$` to specify the column.
+-   We can then direct to a particular column using `mydata$degree`.
+    This essentially means "look in `mydata` and then the column called
+    `degree`. We use the dollar sign `$` to specify the column.
 
 If we want to remove them, we can use `filter()` again!
 
@@ -253,10 +374,6 @@ mydata <- mydata %>%
 ```
 
 Note: this will overwrite `mydata` and remove the cases.
-
-**Now we've identified some individuals in the group. Let's now zoom out and investigate the group as a whole.**   
-**Question 8.1: How many people in the data set did not say that they own a pet?**  
--choose an answer-
 
 ## Exercise 9: Summary Statistics
 
@@ -268,43 +385,104 @@ We can use this code to look across the data set as a whole:
 summary(mydata)
 ```
 
-Look through the output in the console (bottom left panel) and answer the following questions about this group of people:  
-**Question 9.1: What was the mean maths enjoyment score across the data set?**  
--choose an answer- 
+Look through the output in the console (bottom left panel) and answer
+the following questions about this group of people:
 
-**Question 9.2: What is the range for total enjoyment score across the dataset?**  
--choose an answer-  
+::: mcq
 
-**Question 9.3: When you look across the three subjects (maths, science, art), which had the highest mean enjoyment score?**  
--choose an answer-  
+<p><strong>Q9.1: What was the mean maths enjoyment score across the data set?</strong></p>
 
-## Exercise 10: Fixing Luke's Broken Code
+<select class="mcq-select" onchange="checkAnswer(this)">
+  <option value="">Choose an answer...</option>
+  <option value="correct">30.43</option>
+  <option value="wrong">28.07</option>
+  <option value="wrong">30.50</option>
+  <option value="wrong">25.79</option>
+</select>
+
+:::
+
+::: mcq
+
+<p><strong>Q9.2: What is the range for total enjoyment score across the dataset?</strong></p>
+
+<select class="mcq-select" onchange="checkAnswer(this)">
+  <option value="">Choose an answer...</option>
+  <option value="wrong">100</option>
+  <option value="correct">104</option>
+  <option value="wrong">125</option>
+  <option value="wrong">21</option>
+</select>
+
+:::
+
+::: mcq
+
+<p><strong>Q9.3: When you look across the three subjects (maths, science, art), which had the highest mean enjoyment score?</strong></p>
+
+<select class="mcq-select" onchange="checkAnswer(this)">
+  <option value="">Choose an answer...</option>
+  <option value="wrong">maths</option>
+  <option value="correct">science</option>
+  <option value="wrong">art</option>
+</select>
+
+:::
+
+## Exercise 10: Fixing Broken Code
 
 Help!! My code below is not working. I need your help to fix it...
 
-Fix the code below to work out how many coffees were drunk by the person from Canterbury and is studying medicine. Try running the code first and then work out why it doesn't work!
+Fix the code below to work out how many coffees were drunk by the person
+from Canterbury and is studying medicine. Try running the code first and
+then work out why it doesn't work!
 
 ``` r
 mydata %>%
   filter(city = "canterburY", degree == medicine)
 ```
 
-Fix the code below to work out the name of the person who is from London, has a hamster, studies psychology, and did not drink coffee. Try running the code first and then work out why it doesn't work!
+Fix the code below to work out the name of the person who is from
+London, has a hamster, studies psychology, and did not drink coffee. Try
+running the code first and then work out why it doesn't work!
 
 ``` r
 mydata =
   filter(city == "London", pet == "hamsta", degree == "psychology", coffee >1)
 ```
 
-Answer the following questions.
+Answer the following questions once you have fixed the code above.
 
 If you get stuck, use the hints below.
 
-**Question 10.1: How many coffees were drunk by the person from Canterbury and is studying medicine?**  
--choose an answer-
+::: mcq
 
-**Question 10.2: What is the name of the person from London, has a hamster, studies Psychology, and did not drink coffee?**  
--choose an answer-
+<p><strong>Q10.1:**How many coffees were drunk by the person from Canterbury and is studying medicine?**</strong></p>
+
+<select class="mcq-select" onchange="checkAnswer(this)">
+  <option value="">Choose an answer...</option>
+  <option value="wrong">3</option>
+  <option value="wrong">2</option>
+  <option value="wrong">1</option>
+  <option value="correct">0</option>
+</select>
+
+:::
+
+::: mcq
+
+<p><strong>Q10.2**What is the name of the person from London, has a hamster, studies Psychology, and did not drink coffee?**</strong></p>
+
+<select class="mcq-select" onchange="checkAnswer(this)">
+  <option value="">Choose an answer...</option>
+  <option value="wrong">Sofia</option>
+  <option value="correct">Noah</option>
+  <option value="wrong">Gemma</option>
+  <option value="wrong">Sarah</option>
+</select>
+
+:::
+
 
 ------------------------------------------------------------------------
 
@@ -318,9 +496,11 @@ If you get stuck, use the hints below.
 
 -   Use quote marks when necessary. Some are missing.
 
--   Code is case sensitive. There is a capital letter where there shouldn't be one.
+-   Code is case sensitive. There is a capital letter where there
+    shouldn't be one.
 
--   Use symbols correctly. We want to use the pipe %\>% before we filter.
+-   Use symbols correctly. We want to use the pipe %\>% before we
+    filter.
 
 -   Use symbols correctly. More than `>` is not the same as `<`.
 
@@ -328,44 +508,85 @@ If you get stuck, use the hints below.
 
 ------------------------------------------------------------------------
 
-**Below are three optional GUESS WHO questions requiring you to fix the code to find the mystery person!**
+**Below are three optional GUESS WHO questions requiring you to fix the
+code to find the mystery person!**
 
-**Bonus question 1: Fix the code below to find the name of the mystery person:**  
-**Clue 1:** The person is from Manchester.  
-**Clue 2:** They study medicine.  
+**Bonus question 1: Fix the code below to find the name of the mystery
+person:**\
+**Clue 1:** The person is from Manchester.\
+**Clue 2:** They study medicine.\
 **Clue 3:** They do not enjoy art.
 
+```r
 mydata %>%  
   filter(city == "Manchester", degree = "Medicine", art < 10)  
+```
 
-**Who is the person?**  
--choose an answer-
+::: mcq
 
-**Bonus question 2: Fix the code below to see who owns a gecko.**  
-``` r
+<p><strong>Who is this person?</strong></p>
+
+<select class="mcq-select" onchange="checkAnswer(this)">
+  <option value="">Choose an answer...</option>
+  <option value="wrong">Daniel</option>
+  <option value="wrong">Sandra</option>
+  <option value="wrong">Anna</option>
+  <option value="correct">Victoria</option>
+</select>
+
+:::
+
+**Bonus question 2: Fix the code below to see who owns a gecko.**
+
+```r
 mydata %>%  
   filter(!pet = "geck0") 
 ```
 
-**Who is the person?**  
--choose an answer-  
+::: mcq
 
-**Bonus question 3: Fix the code below to see how many students study law and are from London.**  
-``` r
+<p><strong>Who is this person?</strong></p>
+
+<select class="mcq-select" onchange="checkAnswer(this)">
+  <option value="">Choose an answer...</option>
+  <option value="correct">Joseph</option>
+  <option value="wrong">Oliver</option>
+  <option value="wrong">Rosa</option>
+  <option value="wrong">Luis</option>
+</select>
+
+:::
+
+**Bonus question 3: Fix the code below to see how many students study
+law and are from London.**
+
+```r
 mydata %>% 
   filter(degree = "law", city == "London"),
   count() 
 ```
 
-**Who is the person?**  
--choose an answer-
+::: mcq
 
+<p><strong>How many people?</strong></p>
+
+<select class="mcq-select" onchange="checkAnswer(this)">
+  <option value="">Choose an answer...</option>
+  <option value="wrong">0</option>
+  <option value="wrong">1</option>
+  <option value="correct">2</option>
+  <option value="wrong">3</option>
+</select>
+
+:::
 
 ------------------------------------------------------------------------
 
 **Well Done. You have reached the end of the workshop.**
 
 ------------------------------------------------------------------------
+
+```{=html}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -416,3 +637,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+```
+
+```{=html}
+<script>
+function checkAnswer(answer) {
+
+  if (answer.value === "correct") {
+    answer.style.backgroundColor = "#DDF3E4";
+    answer.style.color = "#185C37";
+    answer.style.borderColor = "#2E8B57";
+  }
+
+  else if (answer.value === "wrong") {
+    answer.style.backgroundColor = "#F8DDDF";
+    answer.style.color = "#8F3030";
+    answer.style.borderColor = "#C94C4C";
+  }
+
+  else {
+    answer.style.backgroundColor = "#FFFFFF";
+    answer.style.color = "#07181B";
+    answer.style.borderColor = "#D6E2E5";
+  }
+
+}
+</script>
+```

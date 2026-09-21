@@ -469,7 +469,7 @@ library(tidyverse)
 
 # Files and Folder Structure (2)
 
-![](images/folder_structure.png){width="600"}
+![](images/folder_structure.png){width="300"}
 
 -   Saving your data in a folder that makes sense, such as "Ready4R", will help you find your files next time.\
 -   This will be especially important when you need to analyse your own data.\
@@ -477,7 +477,7 @@ library(tidyverse)
 
 # Working Directory
 
-![](images/folder_structure_WD.png){width="600"}
+![](images/folder_structure_WD.png){width="300"}
 
 -   The working directory is a folder on your computer which RStudio will use to find any data files.
 

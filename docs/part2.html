@@ -312,12 +312,29 @@ names(dataset) # this will show the variable names.</code></pre>
 using them in code later on.</p>
 <p>Answer the following questions. The drop down will turn <strong>green
 if correct</strong> and <strong>red if incorrect.</strong></p>
-<p><strong>Question 2.1: How many variables does this data set
-have?</strong><br />
--choose an answer-</p>
-<p><strong>Question 2.2: Which variable would you use to find out where
-someone is from?</strong><br />
--choose an answer-</p>
+<div class="mcq">
+<p>
+<strong>Q2.1: <strong>How many variables does this data set
+have?</strong></strong>
+</p>
+<p><select class="mcq-select"
+  onchange="checkAnswer(this)"> <option value="">Choose an
+answer…</option> <option value="wrong">9</option>
+<option value="correct">11</option> <option value="wrong">10</option>
+<option value="wrong">8</option> </select></p>
+</div>
+<div class="mcq">
+<p>
+<strong>Q2.2: <strong>Which variable would you use to to find out where
+someone is from?</strong></strong>
+</p>
+<p><select class="mcq-select"
+  onchange="checkAnswer(this)"> <option value="">Choose an
+answer…</option> <option value="correct">city</option>
+<option value="wrong">name</option>
+<option value="wrong">degree</option> <option value="wrong">id</option>
+</select></p>
+</div>
 </div>
 <div id="exercise-3-change-a-variable-name" class="section level2">
 <h2>Exercise 3: Change a Variable Name</h2>
@@ -376,14 +393,30 @@ We now know what information we have about our group. Let’s use RStudio
 to find our more…</p>
 <p>Answer the following questions. The drop down will turn <strong>green
 if correct</strong> and <strong>red if incorrect.</strong></p>
-<p><strong>Question 5.1: I’m trying to find someone who studies Law. How
+<div class="mcq">
+<p>
+<strong>Q5.1:<strong>I’m trying to find someone who studies Law. How
 many people in the data set study Law? Adapt the code above to find the
-answer.</strong><br />
--choose an answer-</p>
-<p><strong>Question 5.2: I’ve changed my mind… I now want to find
-someone who studies Psychology. How many people study
-Psychology?</strong><br />
--choose an answer-</p>
+answer.</strong></strong>
+</p>
+<p><select class="mcq-select"
+  onchange="checkAnswer(this)"> <option value="">Choose an
+answer…</option> <option value="wrong">10</option>
+<option value="correct">9</option> <option value="wrong">8</option>
+<option value="wrong">11</option> </select></p>
+</div>
+<div class="mcq">
+<p>
+<strong>Q5.2:<strong>I’ve changed my mind… I now want to find someone
+who studies Psychology. How many people study
+Psychology?</strong>**</strong>
+</p>
+<p><select class="mcq-select"
+  onchange="checkAnswer(this)"> <option value="">Choose an
+answer…</option> <option value="wrong">8</option>
+<option value="wrong">5</option> <option value="correct">6</option>
+<option value="wrong">7</option> </select></p>
+</div>
 </div>
 <div id="exercise-6-guess-who" class="section level2">
 <h2>Exercise 6: Guess Who?</h2>
@@ -404,21 +437,44 @@ less than 20:</p>
 <p>Use what you have learned above and adapt your code to play GUESS
 WHO? Each of the following questions gives you clues about a person. Use
 RStudio to work out who we are looking for!</p>
-<p><strong>Question 6.1: Use the clues below to find the name of the
-mystery person:</strong><br />
+<p><strong>Use the clues below to find the name of the mystery
+person:</strong><br />
 <strong>Clue 1:</strong> The person is from London.<br />
 <strong>Clue 2:</strong> They have a cat.<br />
 <strong>Clue 3:</strong> Their maths enjoyment score is less than
 10.</p>
-<p><strong>Who is the person?</strong><br />
--choose an answer-</p>
+<div class="mcq">
+<p>
+<strong>Q6.1:<strong>Who is this person?</strong>**</strong>
+</p>
+<p><select class="mcq-select"
+  onchange="checkAnswer(this)"> <option value="">Choose an
+answer…</option> <option value="wrong">Joseph</option>
+<option value="wrong">Eleanor</option>
+<option value="wrong">Victor</option>
+<option value="correct">Jose</option> </select></p>
+</div>
 <p><strong>Question 6.2: Use the clues below to find the name of the
 next mystery person:</strong><br />
 <strong>Clue 1:</strong> The person studies Psychology.<br />
 <strong>Clue 2:</strong> They are from Nottingham.<br />
 <strong>Clue 3:</strong> They do not drink coffee.</p>
-<p><strong>Who is the person?</strong><br />
--choose an answer-</p>
+<p><strong>Question 6.2: Use the clues below to find the name of the
+next mystery person:</strong><br />
+<strong>Clue 1:</strong> The person studies Psychology.<br />
+<strong>Clue 2:</strong> They are from Nottingham.<br />
+<strong>Clue 3:</strong> They do not drink coffee.</p>
+<div class="mcq">
+<p>
+<strong>Q6.2:Who is this person?</strong>
+</p>
+<p><select class="mcq-select" onchange="checkAnswer(this)">
+<option value="">Choose an answer…</option>
+<option value="wrong">Amelia</option>
+<option value="correct">Taylor</option>
+<option value="wrong">George</option>
+<option value="wrong">Antonio</option> </select></p>
+</div>
 </div>
 <div id="exercise-7-create-a-new-variable" class="section level2">
 <h2>Exercise 7: Create a New Variable</h2>
@@ -453,12 +509,31 @@ score:</p>
   slice_max(total_score)</code></pre>
 <p><strong>Now let’s find some more mystery people using just a single
 clue!</strong><br />
-<strong>Question 7.1: What is the name of the person with the lowest
-maths score?</strong><br />
--choose an answer-</p>
-<p><strong>Question 7.2: What is the name of the person with the highest
-total enjoyment score?</strong><br />
--choose an answer-</p>
+</p>
+<div class="mcq">
+<p>
+<strong>Q7.1:<strong>What is the name of the person with the lowest
+maths score?</strong></strong>
+</p>
+<p><select class="mcq-select" onchange="checkAnswer(this)">
+<option value="">Choose an answer…</option>
+<option value="wrong">Jose</option>
+<option value="wrong">Elizabeth</option>
+<option value="correct">Yan</option> <option value="wrong">Olga</option>
+</select></p>
+</div>
+<div class="mcq">
+<p>
+<strong>Q7.2<strong>What is the name of the person with the highest
+total enjoyment score?</strong></strong>
+</p>
+<p><select class="mcq-select" onchange="checkAnswer(this)">
+<option value="">Choose an answer…</option>
+<option value="wrong">Natalya</option>
+<option value="wrong">Oliver</option>
+<option value="correct">Yan</option> <option value="wrong">Sam</option>
+</select></p>
+</div>
 </div>
 <div id="exercise-8-counting-and-removing-missing-data"
 class="section level2">
@@ -485,11 +560,6 @@ again!</p>
   filter(!is.na(degree))</code></pre>
 <p>Note: this will overwrite <code>mydata</code> and remove the
 cases.</p>
-<p><strong>Now we’ve identified some individuals in the group. Let’s now
-zoom out and investigate the group as a whole.</strong><br />
-<strong>Question 8.1: How many people in the data set did not say that
-they own a pet?</strong><br />
--choose an answer-</p>
 </div>
 <div id="exercise-9-summary-statistics" class="section level2">
 <h2>Exercise 9: Summary Statistics</h2>
@@ -498,20 +568,44 @@ score?</strong></p>
 <p>We can use this code to look across the data set as a whole:</p>
 <pre class="r"><code>summary(mydata)</code></pre>
 <p>Look through the output in the console (bottom left panel) and answer
-the following questions about this group of people:<br />
-<strong>Question 9.1: What was the mean maths enjoyment score across the
-data set?</strong><br />
--choose an answer-</p>
-<p><strong>Question 9.2: What is the range for total enjoyment score
-across the dataset?</strong><br />
--choose an answer-</p>
-<p><strong>Question 9.3: When you look across the three subjects (maths,
-science, art), which had the highest mean enjoyment
-score?</strong><br />
--choose an answer-</p>
+the following questions about this group of people:</p>
+<div class="mcq">
+<p>
+<strong>Q9.1: What was the mean maths enjoyment score across the data
+set?</strong>
+</p>
+<p><select class="mcq-select" onchange="checkAnswer(this)">
+<option value="">Choose an answer…</option>
+<option value="correct">30.43</option>
+<option value="wrong">28.07</option>
+<option value="wrong">30.50</option>
+<option value="wrong">25.79</option> </select></p>
 </div>
-<div id="exercise-10-fixing-lukes-broken-code" class="section level2">
-<h2>Exercise 10: Fixing Luke’s Broken Code</h2>
+<div class="mcq">
+<p>
+<strong>Q9.2: What is the range for total enjoyment score across the
+dataset?</strong>
+</p>
+<p><select class="mcq-select" onchange="checkAnswer(this)">
+<option value="">Choose an answer…</option>
+<option value="wrong">100</option> <option value="correct">104</option>
+<option value="wrong">125</option> <option value="wrong">21</option>
+</select></p>
+</div>
+<div class="mcq">
+<p>
+<strong>Q9.3: When you look across the three subjects (maths, science,
+art), which had the highest mean enjoyment score?</strong>
+</p>
+<p><select class="mcq-select" onchange="checkAnswer(this)">
+<option value="">Choose an answer…</option>
+<option value="wrong">maths</option>
+<option value="correct">science</option>
+<option value="wrong">art</option> </select></p>
+</div>
+</div>
+<div id="exercise-10-fixing-broken-code" class="section level2">
+<h2>Exercise 10: Fixing Broken Code</h2>
 <p>Help!! My code below is not working. I need your help to fix it…</p>
 <p>Fix the code below to work out how many coffees were drunk by the
 person from Canterbury and is studying medicine. Try running the code
@@ -523,15 +617,32 @@ London, has a hamster, studies psychology, and did not drink coffee. Try
 running the code first and then work out why it doesn’t work!</p>
 <pre class="r"><code>mydata =
   filter(city == &quot;London&quot;, pet == &quot;hamsta&quot;, degree == &quot;psychology&quot;, coffee &gt;1)</code></pre>
-<p>Answer the following questions.</p>
+<p>Answer the following questions once you have fixed the code
+above.</p>
 <p>If you get stuck, use the hints below.</p>
-<p><strong>Question 10.1: How many coffees were drunk by the person from
-Canterbury and is studying medicine?</strong><br />
--choose an answer-</p>
-<p><strong>Question 10.2: What is the name of the person from London,
-has a hamster, studies Psychology, and did not drink
-coffee?</strong><br />
--choose an answer-</p>
+<div class="mcq">
+<p>
+<strong>Q10.1:<strong>How many coffees were drunk by the person from
+Canterbury and is studying medicine?</strong></strong>
+</p>
+<p><select class="mcq-select" onchange="checkAnswer(this)">
+<option value="">Choose an answer…</option>
+<option value="wrong">3</option> <option value="wrong">2</option>
+<option value="wrong">1</option> <option value="correct">0</option>
+</select></p>
+</div>
+<div class="mcq">
+<p>
+<strong>Q10.2<strong>What is the name of the person from London, has a
+hamster, studies Psychology, and did not drink coffee?</strong></strong>
+</p>
+<p><select class="mcq-select" onchange="checkAnswer(this)">
+<option value="">Choose an answer…</option>
+<option value="wrong">Sofia</option>
+<option value="correct">Noah</option>
+<option value="wrong">Gemma</option>
+<option value="wrong">Sarah</option> </select></p>
+</div>
 <hr />
 <details>
 <summary>
@@ -558,23 +669,49 @@ mystery person:</strong><br />
 <strong>Clue 1:</strong> The person is from Manchester.<br />
 <strong>Clue 2:</strong> They study medicine.<br />
 <strong>Clue 3:</strong> They do not enjoy art.</p>
-<p>mydata %&gt;%<br />
-filter(city == “Manchester”, degree = “Medicine”, art &lt; 10)</p>
-<p><strong>Who is the person?</strong><br />
--choose an answer-</p>
+<pre class="r"><code>mydata %&gt;%  
+  filter(city == &quot;Manchester&quot;, degree = &quot;Medicine&quot;, art &lt; 10)  </code></pre>
+<div class="mcq">
+<p>
+<strong>Who is this person?</strong>
+</p>
+<p><select class="mcq-select" onchange="checkAnswer(this)">
+<option value="">Choose an answer…</option>
+<option value="wrong">Daniel</option>
+<option value="wrong">Sandra</option>
+<option value="wrong">Anna</option>
+<option value="correct">Victoria</option> </select></p>
+</div>
 <p><strong>Bonus question 2: Fix the code below to see who owns a
 gecko.</strong></p>
 <pre class="r"><code>mydata %&gt;%  
   filter(!pet = &quot;geck0&quot;) </code></pre>
-<p><strong>Who is the person?</strong><br />
--choose an answer-</p>
+<div class="mcq">
+<p>
+<strong>Who is this person?</strong>
+</p>
+<p><select class="mcq-select" onchange="checkAnswer(this)">
+<option value="">Choose an answer…</option>
+<option value="correct">Joseph</option>
+<option value="wrong">Oliver</option>
+<option value="wrong">Rosa</option> <option value="wrong">Luis</option>
+</select></p>
+</div>
 <p><strong>Bonus question 3: Fix the code below to see how many students
 study law and are from London.</strong></p>
 <pre class="r"><code>mydata %&gt;% 
   filter(degree = &quot;law&quot;, city == &quot;London&quot;),
   count() </code></pre>
-<p><strong>Who is the person?</strong><br />
--choose an answer-</p>
+<div class="mcq">
+<p>
+<strong>How many people?</strong>
+</p>
+<p><select class="mcq-select" onchange="checkAnswer(this)">
+<option value="">Choose an answer…</option>
+<option value="wrong">0</option> <option value="wrong">1</option>
+<option value="correct">2</option> <option value="wrong">3</option>
+</select></p>
+</div>
 <hr />
 <p><strong>Well Done. You have reached the end of the
 workshop.</strong></p>
@@ -628,6 +765,29 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+</script>
+<script>
+function checkAnswer(answer) {
+
+  if (answer.value === "correct") {
+    answer.style.backgroundColor = "#DDF3E4";
+    answer.style.color = "#185C37";
+    answer.style.borderColor = "#2E8B57";
+  }
+
+  else if (answer.value === "wrong") {
+    answer.style.backgroundColor = "#F8DDDF";
+    answer.style.color = "#8F3030";
+    answer.style.borderColor = "#C94C4C";
+  }
+
+  else {
+    answer.style.backgroundColor = "#FFFFFF";
+    answer.style.color = "#07181B";
+    answer.style.borderColor = "#D6E2E5";
+  }
+
+}
 </script>
 </div>
 </div>
