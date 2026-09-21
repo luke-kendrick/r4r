@@ -1,6 +1,6 @@
 ---
 title: "R4R: Guided Tutorial"
-author:
+author: To navigate slides you can either use the arrows in the bottom right corner or the left and right buttons on your keyboard. Follow along on the PC lab screen for this part of the workshop.
 subtitle: '<img src="images/mde_icon_2.png" class="title-logo">'
 output:
   revealjs::revealjs_presentation:
