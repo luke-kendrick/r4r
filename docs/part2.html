@@ -274,7 +274,7 @@ $(document).ready(function () {
 <p><strong>Aims:</strong></p>
 <ul>
 <li><p>Practice importing a .csv data file into RStudio using
-<code>read_csv()</code></p></li>
+<code>read_csv()</code>.</p></li>
 <li><p>Practice inspecting your data in RStudio.</p></li>
 <li><p>Use different data wrangling functions to develop your data
 handling skills.</p></li>
@@ -353,16 +353,17 @@ a variable.</p>
 <p><strong>We do not really care about the <code>age</code> variable for
 the next few exercises.</strong></p>
 <p>Let’s remove it.</p>
-<p>The code below will create a new object (once we start removing
-things, it is best to keep the original data file called
-<code>dataset</code> in the environment)</p>
+<p>The code below will create a new object. When making changes to a
+data set (such as removing columns), it is generally best to keep the
+original data file called <code>dataset</code> unchanged in the
+environment and save the modified version to a new object.</p>
 <pre class="r"><code>mydata &lt;- dataset %&gt;%
   select(-age)</code></pre>
 <p>This code will:</p>
 <ul>
 <li><p>Create a new object called <code>mydata</code>.</p></li>
-<li><p>Take our original data called <code>dataset</code></p></li>
-<li><p>“And then” <code>%&gt;%</code></p></li>
+<li><p>Take our original data called <code>dataset</code>.</p></li>
+<li><p>“And then” <code>%&gt;%</code>.</p></li>
 <li><p>Use the select() function to remove <code>age</code> by placing a
 minus symbol <code>-</code> in front of it.</p></li>
 </ul>
@@ -386,7 +387,7 @@ Birmingham using the code below:</p>
 match.</p></li>
 <li><p>I’ve added “birmingham” in speech marks. Note it is lowercase as
 to match the data set and then…</p></li>
-<li><p>count() the number of data points.</p></li>
+<li><p><code>count()</code> the number of data points.</p></li>
 </ul>
 <p><strong>Time to investigate!</strong><br />
 We now know what information we have about our group. Let’s use RStudio
@@ -395,7 +396,7 @@ to find our more…</p>
 if correct</strong> and <strong>red if incorrect.</strong></p>
 <div class="mcq">
 <p>
-<strong>Q5.1:<strong>I’m trying to find someone who studies Law. How
+<strong>Q5.1: <strong>I’m trying to find someone who studies Law. How
 many people in the data set study Law? Adapt the code above to find the
 answer.</strong></strong>
 </p>
@@ -407,9 +408,9 @@ answer…</option> <option value="wrong">10</option>
 </div>
 <div class="mcq">
 <p>
-<strong>Q5.2:<strong>I’ve changed my mind… I now want to find someone
+<strong>Q5.2: <strong>I’ve changed my mind… I now want to find someone
 who studies Psychology. How many people study
-Psychology?</strong>**</strong>
+Psychology?</strong></strong>
 </p>
 <p><select class="mcq-select"
   onchange="checkAnswer(this)"> <option value="">Choose an
@@ -434,31 +435,26 @@ example, this will show all people who have a maths enjoyment score of
 less than 20:</p>
 <pre class="r"><code>mydata %&gt;%
   filter(maths &lt; 20)</code></pre>
-<p>Use what you have learned above and adapt your code to play GUESS
-WHO? Each of the following questions gives you clues about a person. Use
+<p>Use what you have learned above and adapt your code to play Guess
+Who? Each of the following questions gives you clues about a person. Use
 RStudio to work out who we are looking for!</p>
 <p><strong>Use the clues below to find the name of the mystery
 person:</strong><br />
-<strong>Clue 1:</strong> The person is from London.<br />
-<strong>Clue 2:</strong> They have a cat.<br />
-<strong>Clue 3:</strong> Their maths enjoyment score is less than
+<strong>Clue 1:</strong> The person is from Cardiff.<br />
+<strong>Clue 2:</strong> They have a hamster.<br />
+<strong>Clue 3:</strong> Their science enjoyment score is less than
 10.</p>
 <div class="mcq">
 <p>
-<strong>Q6.1:<strong>Who is this person?</strong>**</strong>
+<strong>Q6.1:<strong>Who is this person?</strong></strong>
 </p>
 <p><select class="mcq-select"
-  onchange="checkAnswer(this)"> <option value="">Choose an
+onchange="checkAnswer(this)"> <option value="">Choose an
 answer…</option> <option value="wrong">Joseph</option>
 <option value="wrong">Eleanor</option>
 <option value="wrong">Victor</option>
-<option value="correct">Jose</option> </select></p>
+<option value="correct">Natalya</option> </select></p>
 </div>
-<p><strong>Question 6.2: Use the clues below to find the name of the
-next mystery person:</strong><br />
-<strong>Clue 1:</strong> The person studies Psychology.<br />
-<strong>Clue 2:</strong> They are from Nottingham.<br />
-<strong>Clue 3:</strong> They do not drink coffee.</p>
 <p><strong>Question 6.2: Use the clues below to find the name of the
 next mystery person:</strong><br />
 <strong>Clue 1:</strong> The person studies Psychology.<br />
@@ -512,19 +508,19 @@ clue!</strong><br />
 </p>
 <div class="mcq">
 <p>
-<strong>Q7.1:<strong>What is the name of the person with the lowest
-maths score?</strong></strong>
+<strong>Q7.1: <strong>What is the name of the person with the lowest
+maths enjoyment score?</strong></strong>
 </p>
 <p><select class="mcq-select" onchange="checkAnswer(this)">
 <option value="">Choose an answer…</option>
-<option value="wrong">Jose</option>
+<option value="correct">Jose</option>
 <option value="wrong">Elizabeth</option>
-<option value="correct">Yan</option> <option value="wrong">Olga</option>
+<option value="wrong">Yan</option> <option value="wrong">Olga</option>
 </select></p>
 </div>
 <div class="mcq">
 <p>
-<strong>Q7.2<strong>What is the name of the person with the highest
+<strong>Q7.2: <strong>What is the name of the person with the highest
 total enjoyment score?</strong></strong>
 </p>
 <p><select class="mcq-select" onchange="checkAnswer(this)">
@@ -551,7 +547,7 @@ not everyone is studying for one.</p>
 <code>is.na</code>)</p></li>
 <li><p>We can then direct to a particular column using
 <code>mydata$degree</code>. This essentially means “look in
-<code>mydata</code> and then the column called <code>degree</code>. We
+<code>mydata</code> and then the column called <code>degree</code>”. We
 use the dollar sign <code>$</code> to specify the column.</p></li>
 </ul>
 <p>If we want to remove them, we can use <code>filter()</code>
@@ -576,10 +572,10 @@ set?</strong>
 </p>
 <p><select class="mcq-select" onchange="checkAnswer(this)">
 <option value="">Choose an answer…</option>
-<option value="correct">30.43</option>
-<option value="wrong">28.07</option>
+<option value="correct">30.07</option>
+<option value="wrong">28.52</option>
 <option value="wrong">30.50</option>
-<option value="wrong">25.79</option> </select></p>
+<option value="wrong">25.18</option> </select></p>
 </div>
 <div class="mcq">
 <p>
@@ -599,8 +595,8 @@ art), which had the highest mean enjoyment score?</strong>
 </p>
 <p><select class="mcq-select" onchange="checkAnswer(this)">
 <option value="">Choose an answer…</option>
-<option value="wrong">maths</option>
-<option value="correct">science</option>
+<option value="wrong">science</option>
+<option value="correct">maths</option>
 <option value="wrong">art</option> </select></p>
 </div>
 </div>

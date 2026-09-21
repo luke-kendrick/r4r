@@ -9,11 +9,12 @@ editor_options:
     wrap: 72
 ---
 
+
 # Practical Task: Data Handling Skills
 
 **Aims:**
 
--   Practice importing a .csv data file into RStudio using `read_csv()`
+-   Practice importing a .csv data file into RStudio using `read_csv()`.
 
 -   Practice inspecting your data in RStudio.
 
@@ -117,9 +118,7 @@ exercises.**
 
 Let's remove it.
 
-The code below will create a new object (once we start removing things,
-it is best to keep the original data file called `dataset` in the
-environment)
+The code below will create a new object. When making changes to a data set (such as removing columns), it is generally best to keep the original data file called `dataset` unchanged in the environment and save the modified version to a new object.
 
 ``` r
 mydata <- dataset %>%
@@ -130,9 +129,9 @@ This code will:
 
 -   Create a new object called `mydata`.
 
--   Take our original data called `dataset`
+-   Take our original data called `dataset`.
 
--   "And then" `%>%`
+-   "And then" `%>%`.
 
 -   Use the select() function to remove `age` by placing a minus symbol
     `-` in front of it.
@@ -166,7 +165,7 @@ This code will:
 -   I've added "birmingham" in speech marks. Note it is lowercase as to
     match the data set and then...
 
--   count() the number of data points.
+-   `count()` the number of data points.
 
 **Time to investigate!**\
 We now know what information we have about our group. Let's use RStudio
@@ -176,7 +175,7 @@ Answer the following questions. The drop down will turn **green if
 correct** and **red if incorrect.**
 
 ::: mcq
-<p><strong>Q5.1:**I'm trying to find someone who studies Law. How many people
+<p><strong>Q5.1: **I'm trying to find someone who studies Law. How many people
 in the data set study Law? Adapt the code above to find the
 answer.**</strong></p>
 
@@ -188,8 +187,8 @@ answer...</option> <option value="wrong">10</option>
 :::
 
 ::: mcq
-<p><strong>Q5.2:**I've changed my mind... I now want to find someone who
-studies Psychology. How many people study Psychology?**\*\*</strong></p>
+<p><strong>Q5.2: **I've changed my mind... I now want to find someone who
+studies Psychology. How many people study Psychology?**</strong></p>
 
 <select class="mcq-select"
   onchange="checkAnswer(this)"> <option value="">Choose an
@@ -224,33 +223,28 @@ mydata %>%
   filter(maths < 20)
 ```
 
-Use what you have learned above and adapt your code to play GUESS WHO?
+Use what you have learned above and adapt your code to play Guess Who?
 Each of the following questions gives you clues about a person. Use
 RStudio to work out who we are looking for!
 
 **Use the clues below to find the name of the mystery person:**\
-**Clue 1:** The person is from London.\
-**Clue 2:** They have a cat.\
-**Clue 3:** Their maths enjoyment score is less than 10.
-
+**Clue 1:** The person is from Cardiff.\
+**Clue 2:** They have a hamster.\
+**Clue 3:** Their science enjoyment score is less than 10.
+ 
 ::: mcq
-<p><strong>Q6.1:**Who is this person?**\*\*</strong></p>
-
+<p><strong>Q6.1:**Who is this person?**</strong></p>
+ 
 <select class="mcq-select"
-  onchange="checkAnswer(this)"> <option value="">Choose an
+onchange="checkAnswer(this)"> <option value="">Choose an
 answer...</option> <option value="wrong">Joseph</option>
 <option value="wrong">Eleanor</option>
 <option value="wrong">Victor</option>
-<option value="correct">Jose</option> </select>
+<option value="correct">Natalya</option> </select>
 :::
 
 **Question 6.2: Use the clues below to find the name of the next mystery
 person:**\
-**Clue 1:** The person studies Psychology.\
-**Clue 2:** They are from Nottingham.\
-**Clue 3:** They do not drink coffee.
-
-**Question 6.2: Use the clues below to find the name of the next mystery person:**\
 **Clue 1:** The person studies Psychology.\
 **Clue 2:** They are from Nottingham.\
 **Clue 3:** They do not drink coffee.
@@ -317,13 +311,13 @@ mydata %>%
 
 ::: mcq
 
-<p><strong>Q7.1:**What is the name of the person with the lowest maths score?**</strong></p>
+<p><strong>Q7.1: **What is the name of the person with the lowest maths enjoyment score?**</strong></p>
 
 <select class="mcq-select" onchange="checkAnswer(this)">
   <option value="">Choose an answer...</option>
-  <option value="wrong">Jose</option>
+  <option value="correct">Jose</option>
   <option value="wrong">Elizabeth</option>
-  <option value="correct">Yan</option>
+  <option value="wrong">Yan</option>
   <option value="wrong">Olga</option>
 </select>
 
@@ -331,7 +325,7 @@ mydata %>%
 
 ::: mcq
 
-<p><strong>Q7.2**What is the name of the person with the highest total enjoyment score?**</strong></p>
+<p><strong>Q7.2: **What is the name of the person with the highest total enjoyment score?**</strong></p>
 
 <select class="mcq-select" onchange="checkAnswer(this)">
   <option value="">Choose an answer...</option>
@@ -364,7 +358,7 @@ This code will:
 
 -   We can then direct to a particular column using `mydata$degree`.
     This essentially means "look in `mydata` and then the column called
-    `degree`. We use the dollar sign `$` to specify the column.
+    `degree`". We use the dollar sign `$` to specify the column.
 
 If we want to remove them, we can use `filter()` again!
 
@@ -394,10 +388,10 @@ the following questions about this group of people:
 
 <select class="mcq-select" onchange="checkAnswer(this)">
   <option value="">Choose an answer...</option>
-  <option value="correct">30.43</option>
-  <option value="wrong">28.07</option>
+  <option value="correct">30.07</option>
+  <option value="wrong">28.52</option>
   <option value="wrong">30.50</option>
-  <option value="wrong">25.79</option>
+  <option value="wrong">25.18</option>
 </select>
 
 :::
@@ -422,8 +416,8 @@ the following questions about this group of people:
 
 <select class="mcq-select" onchange="checkAnswer(this)">
   <option value="">Choose an answer...</option>
-  <option value="wrong">maths</option>
-  <option value="correct">science</option>
+  <option value="wrong">science</option>
+  <option value="correct">maths</option>
   <option value="wrong">art</option>
 </select>
 
