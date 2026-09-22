@@ -296,10 +296,10 @@ ans <- answer
 -   You might notice here you've put an existing box into a new box called `ans`.
 
 # coDe iS CasE SenSiTive
-
-Try running:
 ::: demo-marker
 :::
+Try running:
+
 ``` r
 print(Name)
 ```
