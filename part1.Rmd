@@ -556,11 +556,11 @@ view(dat) # opens object to check raw data
 ```
 
 # Summarise Data
-
-- Finally, you can very quickly summarise the data using the `summary()` function.
-- This will provide some (very) basic values within the data set.
 ::: demo-marker
 :::
+- Finally, you can very quickly summarise the data using the `summary()` function.
+- This will provide some (very) basic values within the data set.
+
 ```r
 summary(dat)
 ```
